@@ -1,0 +1,46 @@
+{
+  "name": "shlink-api-spec-ui",
+  "description": "Shlink project Swagger UI toload shlink specs",
+  "author": "Alejandro Celaya Alastrué",
+  "readmeFilename": "README.md",
+  "private": false,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shlinkio/shlink.io"
+  },
+  "scripts": {
+    "lint": "eslint --ext .js,.jsx,.ts,.tsx components pages",
+    "lint:fix": "npm run lint -- --fix",
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "npm run build && next export"
+  },
+  "dependencies": {
+    "next": "^9.0.4",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  },
+  "devDependencies": {
+    "@types/next": "^8.0.6",
+    "@types/node": "^12.7.2",
+    "@types/optimize-css-assets-webpack-plugin": "^5.0.0",
+    "@types/react": "^16.9.2",
+    "@zeit/next-sass": "^1.0.1",
+    "babel-eslint": "^10.0.2",
+    "eslint": "^5.11.1",
+    "eslint-config-adidas-babel": "^1.1.0",
+    "eslint-config-adidas-env": "^1.1.0",
+    "eslint-config-adidas-react": "^1.1.1",
+    "eslint-config-adidas-typescript": "^1.0.1",
+    "eslint-loader": "^2.1.1",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^21.22.0",
+    "eslint-plugin-jsx-a11y": "^6.1.2",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-react": "^7.11.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
+    "typescript": "~3.5.3"
+  }
+}

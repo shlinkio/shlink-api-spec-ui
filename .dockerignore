@@ -1,0 +1,9 @@
+node_modules
+/*.md
+LICENSE
+/build
+docker-compose.*
+/.next/
+/out/
+npm-debug.log*
+/home

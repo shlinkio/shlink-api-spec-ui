@@ -1,0 +1,8 @@
+.idea
+/build
+node_modules
+docker-compose.override.yml
+/.next/
+/out/
+npm-debug.log*
+home
