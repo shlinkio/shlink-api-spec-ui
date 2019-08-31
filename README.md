@@ -8,4 +8,4 @@
 
 Swagger UI app which can be used to load shlink's Open API specs.
 
-Hasted at [api-spec.shlink-api-spec-ui](https://api-spec.shlink.io)
+Hasted at [api-spec.shlink.io](https://api-spec.shlink.io)
