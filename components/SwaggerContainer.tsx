@@ -1,19 +1,17 @@
 import React, { FunctionComponent } from 'react';
 import dynamic from 'next/dynamic';
 import 'swagger-ui-react/swagger-ui.css';
-import Header from './Header';
+import Header, { HeaderProps } from './Header';
 
 const SwaggerUI = dynamic(import('swagger-ui-react')); // Swagger UI cannot be SSR
 
-interface SwaggerContainerProps {
+interface SwaggerContainerProps extends HeaderProps {
   url: string;
-  setUrl: (newUrl: string) => void;
-  tags: string[];
 }
 
-const SwaggerContainer: FunctionComponent<SwaggerContainerProps> = ({ url, setUrl, tags }) => (
+const SwaggerContainer: FunctionComponent<SwaggerContainerProps> = ({ url, setActiveTag, tags }) => (
   <React.Fragment>
-    <Header setUrl={setUrl} tags={tags} />
+    <Header setActiveTag={setActiveTag} tags={tags} />
     <SwaggerUI url={url} docExpansion="list" />
   </React.Fragment>
 );

@@ -1,13 +1,13 @@
-import React, { FunctionComponent } from 'react';
+import React, { ChangeEvent, FunctionComponent } from 'react';
 import './Header.css';
 
-interface HeaderProps {
-  setUrl: (newUrl: string) => void;
+export interface HeaderProps {
+  setActiveTag: (newUrl: string) => void;
   tags: string[];
 }
 
-const Header: FunctionComponent<HeaderProps> = ({ setUrl, tags }) => {
-  console.log(setUrl);
+const Header: FunctionComponent<HeaderProps> = ({ setActiveTag, tags }) => {
+  const onTagChange = ({ target }: ChangeEvent<HTMLSelectElement>) => setActiveTag(target.value);
 
   return (
     <header className="header swagger-ui">
@@ -21,8 +21,8 @@ const Header: FunctionComponent<HeaderProps> = ({ setUrl, tags }) => {
           />{' '}
           Shlink - <small>The URL shortener</small>
         </h2>
-        <select className="header__tags-list">
-          {tags.map((tag: string) => <option key={tag}>Shlink {tag}</option>)}
+        <select className="header__tags-list" onChange={onTagChange}>
+          {tags.map((tag: string) => <option key={tag} value={tag}>Shlink {tag}</option>)}
         </select>
       </div>
     </header>
