@@ -3,7 +3,7 @@ import dynamic from 'next/dynamic';
 import 'swagger-ui-react/swagger-ui.css';
 import Header, { HeaderProps } from './Header';
 
-const SwaggerUI = dynamic(import('swagger-ui-react')); // Swagger UI cannot be SSR
+const SwaggerUI = dynamic(import('swagger-ui-react'), { ssr: false }); // Swagger UI cannot be server-side rendered
 
 interface SwaggerContainerProps extends HeaderProps {
   url: string;
