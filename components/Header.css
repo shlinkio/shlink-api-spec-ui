@@ -18,3 +18,9 @@
 .header__tags-list {
     float: right;
 }
+
+@media (max-width: 767px) {
+    .header__subtitle {
+        display: none;
+    }
+}

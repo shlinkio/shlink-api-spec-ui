@@ -19,7 +19,7 @@ const Header: FunctionComponent<HeaderProps> = ({ setActiveTag, tags }) => {
             width="30"
             className="header__title-logo"
           />{' '}
-          Shlink - <small>The URL shortener</small>
+          Shlink<span className="header__subtitle"> - <small>The URL shortener</small></span>
         </h2>
         <select className="header__tags-list" onChange={onTagChange}>
           {tags.map((tag: string) => <option key={tag} value={tag}>Shlink {tag}</option>)}
