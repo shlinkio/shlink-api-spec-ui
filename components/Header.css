@@ -3,10 +3,6 @@
     background-color: #4696E5;
     padding: 15px 0;
     box-sizing: border-box;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
 }
 
 .header__title {

@@ -18,9 +18,11 @@
     "export": "npm run build && next export"
   },
   "dependencies": {
+    "@types/react-headroom": "^2.2.1",
     "next": "^9.0.4",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
+    "react-headroom": "^2.2.8",
     "swagger-ui": "^3.23.8",
     "swagger-ui-react": "^3.23.6"
   },

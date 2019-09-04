@@ -13,9 +13,7 @@ interface SwaggerContainerProps extends HeaderProps {
 const SwaggerContainer: FunctionComponent<SwaggerContainerProps> = ({ url, setActiveTag, tags }) => (
   <React.Fragment>
     <Header setActiveTag={setActiveTag} tags={tags} />
-    <div className="swagger-container__swagger-ui">
-      <SwaggerUI url={url} docExpansion="list" deepLinking={true} />
-    </div>
+    <SwaggerUI url={url} docExpansion="list" deepLinking={true} />
   </React.Fragment>
 );
 
