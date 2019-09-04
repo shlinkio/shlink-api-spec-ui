@@ -1,26 +1,26 @@
 .header {
-    height: 60px;
-    background-color: #4696E5;
-    padding: 15px 0;
-    box-sizing: border-box;
+  height: 60px;
+  background-color: #4696e5;
+  padding: 15px 0;
+  box-sizing: border-box;
 }
 
 .header__title {
-    margin: 0;
-    color: white;
-    float: left;
+  margin: 0;
+  color: white;
+  float: left;
 }
 
 .header__title-logo {
-    vertical-align: bottom;
+  vertical-align: bottom;
 }
 
 .header__tags-list {
-    float: right;
+  float: right;
 }
 
 @media (max-width: 767px) {
-    .header__subtitle {
-        display: none;
-    }
+  .header__subtitle {
+    display: none;
+  }
 }
