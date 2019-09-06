@@ -3,12 +3,12 @@ import Headroom from 'react-headroom';
 import './Header.css';
 
 export interface HeaderProps {
-  setActiveTag: (newTag: string) => void;
+  setTag: (newTag: string) => void;
   tags: string[];
 }
 
-const Header: FunctionComponent<HeaderProps> = ({ setActiveTag, tags }) => {
-  const onTagChange = ({ target }: ChangeEvent<HTMLSelectElement>) => setActiveTag(target.value);
+const Header: FunctionComponent<HeaderProps> = ({ setTag, tags }) => {
+  const onTagChange = ({ target }: ChangeEvent<HTMLSelectElement>) => setTag(target.value);
 
   return (
     <Headroom>

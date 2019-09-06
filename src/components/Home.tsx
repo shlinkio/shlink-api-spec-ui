@@ -33,7 +33,7 @@ const Home: FunctionComponent = () => {
         <link rel="icon" type="image/x-icon" href={BASE64_FAVICON} />
       </Head>
 
-      {url === '' ? <LoadingSpec withError={error} /> : <SwaggerContainer url={url} setActiveTag={loadSpecForTag} tags={tags} />}
+      {url === '' ? <LoadingSpec withError={error} /> : <SwaggerContainer url={url} tags={tags} setTag={loadSpecForTag} />}
     </div>
   );
 };
