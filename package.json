@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "@types/react-headroom": "^2.2.1",
+    "classnames": "^2.2.6",
     "next": "^9.0.4",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
@@ -31,6 +32,7 @@
   },
   "devDependencies": {
     "@shlinkio/eslint-config-js-coding-standard": "^1.0.1",
+    "@types/classnames": "^2.2.9",
     "@types/next": "^8.0.6",
     "@types/node": "^12.7.2",
     "@types/optimize-css-assets-webpack-plugin": "^5.0.0",

@@ -39,8 +39,7 @@ const Home: FunctionComponent = () => {
         <link rel="icon" type="image/x-icon" href={BASE64_FAVICON} />
       </Head>
 
-      {error && <h2 style={{ color: 'red' }}>An error occurred</h2>}
-      {url === '' ? <LoadingSpec /> : <SwaggerContainer url={url} setActiveTag={setActiveTag} tags={tags} />}
+      {url === '' ? <LoadingSpec withError={error} /> : <SwaggerContainer url={url} setActiveTag={setActiveTag} tags={tags} />}
     </div>
   );
 };
