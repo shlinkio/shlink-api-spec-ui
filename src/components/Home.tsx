@@ -14,16 +14,18 @@ const Home: FunctionComponent = () => {
   const navigateToTag = async (tag: string) => navigate(`/?version=${tag}`);
 
   useEffect(() => {
+    const { version } = query;
+    const versionToLoad = version || tags[0];
+
+    if (versionToLoad) {
+      setUrl(`https://raw.githubusercontent.com/shlinkio/shlink/${versionToLoad}/docs/swagger/swagger.json`);
+    }
+  }, [ query, tags ]);
+  useEffect(() => {
     loadTags()
       .then((tags: string[]) => setTags(tags))
       .catch(() => setError(true));
   }, []);
-  useEffect(() => {
-    const { version } = query;
-    const versionToLoad = version || tags[0];
-
-    setUrl(`https://raw.githubusercontent.com/shlinkio/shlink/${versionToLoad}/docs/swagger/swagger.json`);
-  }, [ query, tags ]);
 
   return (
     <div>
