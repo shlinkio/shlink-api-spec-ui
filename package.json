@@ -21,7 +21,6 @@
     "export": "npm run build && next export"
   },
   "dependencies": {
-    "@reach/router": "^1.2.1",
     "@types/react-headroom": "^2.2.1",
     "classnames": "^2.2.6",
     "next": "^9.0.4",

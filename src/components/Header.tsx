@@ -1,5 +1,6 @@
-import React, { ChangeEvent, FunctionComponent } from 'react';
+import React, { ChangeEvent, FunctionComponent, useEffect, useState } from 'react';
 import Headroom from 'react-headroom';
+import { useRouter } from '../helpers';
 import './Header.css';
 
 export interface HeaderProps {
@@ -8,7 +9,13 @@ export interface HeaderProps {
 }
 
 const Header: FunctionComponent<HeaderProps> = ({ setTag, tags }) => {
+  const { query } = useRouter();
+  const [ activeTag, setActiveTag ] = useState('');
   const onTagChange = ({ target }: ChangeEvent<HTMLSelectElement>) => setTag(target.value);
+
+  useEffect(() => {
+    setActiveTag(String(query.version));
+  }, [ query ]);
 
   return (
     <Headroom>
@@ -23,7 +30,7 @@ const Header: FunctionComponent<HeaderProps> = ({ setTag, tags }) => {
             />{' '}
             Shlink<span className="header__subtitle"> - <small>The URL shortener</small></span>
           </h2>
-          <select className="header__tags-list" onChange={onTagChange}>
+          <select className="header__tags-list" value={activeTag} onChange={onTagChange}>
             {tags.map((tag: string) => <option key={tag} value={tag}>Shlink {tag}</option>)}
           </select>
         </div>
