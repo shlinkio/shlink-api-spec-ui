@@ -27,7 +27,7 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-headroom": "^2.2.8",
-    "swagger-ui": "^3.23.8",
+    "swagger-ui": "^3.23.11",
     "swagger-ui-react": "^3.23.6"
   },
   "devDependencies": {
