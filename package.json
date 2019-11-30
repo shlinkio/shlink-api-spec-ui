@@ -27,8 +27,8 @@
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
     "react-headroom": "^2.2.8",
-    "swagger-ui": "^3.23.11",
-    "swagger-ui-react": "^3.23.6"
+    "swagger-ui": "^3.24.3",
+    "swagger-ui-react": "^3.24.3"
   },
   "devDependencies": {
     "@shlinkio/eslint-config-js-coding-standard": "^1.0.1",
