@@ -11,9 +11,9 @@
   },
   "scripts": {
     "lint": "npm run lint:js && npm run lint:css",
-    "lint:js": "eslint --ext .js,.jsx,.ts,.tsx src src/pages",
+    "lint:js": "eslint --ext .js,.jsx,.ts,.tsx src",
     "lint:js:fix": "npm run lint:js -- --fix",
-    "lint:css": "stylelint src/pages/*.css src/components/*.css",
+    "lint:css": "stylelint src/**/*.css",
     "lint:css:fix": "npm run lint:css -- --fix",
     "dev": "next dev",
     "build": "next build",
