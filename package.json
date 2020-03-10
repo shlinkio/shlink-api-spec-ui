@@ -11,9 +11,9 @@
   },
   "scripts": {
     "lint": "npm run lint:js && npm run lint:css",
-    "lint:js": "eslint --ext .js,.jsx,.ts,.tsx src pages",
+    "lint:js": "eslint --ext .js,.jsx,.ts,.tsx src",
     "lint:js:fix": "npm run lint:js -- --fix",
-    "lint:css": "stylelint pages/*.css src/components/*.css",
+    "lint:css": "stylelint src/**/*.css",
     "lint:css:fix": "npm run lint:css -- --fix",
     "dev": "next dev",
     "build": "next build",
@@ -21,11 +21,10 @@
     "export": "npm run build && next export"
   },
   "dependencies": {
-    "@types/react-headroom": "^2.2.1",
     "classnames": "^2.2.6",
-    "next": "^9.0.4",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0",
+    "next": "^9.3.0",
+    "react": "^16.13.0",
+    "react-dom": "^16.13.0",
     "react-headroom": "^2.2.8",
     "swagger-ui": "^3.24.3",
     "swagger-ui-react": "^3.24.3"
@@ -33,10 +32,11 @@
   "devDependencies": {
     "@shlinkio/eslint-config-js-coding-standard": "^1.0.1",
     "@types/classnames": "^2.2.9",
-    "@types/next": "^8.0.6",
+    "@types/next": "^9.0.0",
     "@types/node": "^12.7.2",
     "@types/optimize-css-assets-webpack-plugin": "^5.0.0",
     "@types/react": "^16.9.2",
+    "@types/react-headroom": "^2.2.1",
     "@types/swagger-ui-react": "^3.23.0",
     "@zeit/next-css": "^1.0.1",
     "babel-eslint": "^10.0.2",
@@ -46,6 +46,6 @@
     "stylelint": "^10.1.0",
     "stylelint-config-adidas": "^1.2.1",
     "stylelint-config-adidas-bem": "^1.2.0",
-    "typescript": "~3.5.3"
+    "typescript": "~3.8.3"
   }
 }

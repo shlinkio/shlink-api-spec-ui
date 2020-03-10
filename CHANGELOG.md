@@ -4,6 +4,29 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org).
 
+## 1.2.0 - 2020-03-10
+
+#### Added
+
+* Updated dependencies, including [next.js](https://nextjs.org/) to v9.3
+
+#### Changed
+
+* *Nothing*
+
+#### Deprecated
+
+* *Nothing*
+
+#### Removed
+
+* *Nothing*
+
+#### Fixed
+
+* [#8](https://github.com/shlinkio/shlink-api-spec-ui/issues/8) Fixed logo path.
+
+
 ## 1.1.1 - 2019-11-30
 
 #### Added

@@ -1,6 +1,7 @@
 import React, { ChangeEvent, FunctionComponent, useEffect, useState } from 'react';
 import Headroom from 'react-headroom';
 import { useRouter } from '../helpers';
+import ShlinkLogo from './ShlinkLogo';
 import './Header.css';
 
 export interface HeaderProps {
@@ -22,12 +23,7 @@ const Header: FunctionComponent<HeaderProps> = ({ setTag, tags }) => {
       <header className="header swagger-ui">
         <div className="wrapper">
           <h2 className="header__title">
-            <img
-              src="https://shlink.io/images/shlink-logo-white.png"
-              alt="Shlink"
-              width="30"
-              className="header__title-logo"
-            />{' '}
+            <ShlinkLogo className="header__title-logo" />{' '}
             Shlink<span className="header__subtitle"> - <small>The URL shortener</small></span>
           </h2>
           <select className="header__tags-list" value={activeTag} onChange={onTagChange}>

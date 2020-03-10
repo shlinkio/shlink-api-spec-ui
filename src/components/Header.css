@@ -13,6 +13,8 @@
 
 .header__title-logo {
   vertical-align: bottom;
+  width: 30px;
+  height: 30px;
 }
 
 .header__tags-list {
