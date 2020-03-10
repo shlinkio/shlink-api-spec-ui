@@ -1,5 +1,5 @@
 import React, { FunctionComponent } from 'react';
-import Home from '../src/components/Home';
+import Home from '../components/Home';
 import './index.css';
 
 const HomePage: FunctionComponent = () => <Home />;
