@@ -4,6 +4,30 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org).
 
+## 1.3.0 - 2020-03-31
+
+#### Added
+
+* Updated to [next.js](https://nextjs.org/) security patch, v9.3.2
+* Configured docker image build as part of regular travis build.
+
+#### Changed
+
+* *Nothing*
+
+#### Deprecated
+
+* *Nothing*
+
+#### Removed
+
+* *Nothing*
+
+#### Fixed
+
+* *Nothing*
+
+
 ## 1.2.0 - 2020-03-10
 
 #### Added
