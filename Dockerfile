@@ -1,4 +1,4 @@
-FROM node:12.16.0-alpine as node
+FROM node:12.16.1-alpine as node
 COPY . /shlink-api-spec
 RUN cd /shlink-api-spec && \
     npm install && \
