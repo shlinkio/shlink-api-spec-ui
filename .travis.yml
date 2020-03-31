@@ -1,7 +1,7 @@
 language: node_js
 
 node_js:
-  - "12.16.0"
+  - "12.16.1"
 
 cache:
   directories:
@@ -15,4 +15,11 @@ install:
 
 script:
   - npm run lint
-  - if [[ -z $TRAVIS_TAG ]]; then docker build -t shlink-website:test . ; fi
+  - if [[ $TRAVIS_PULL_REQUEST != 'false' ]]; then docker build -t shlink-website:test . ; fi
+
+deploy:
+  - provider: script
+    script: bash ./scripts/docker/build
+    on:
+      all_branches: true
+      condition: $TRAVIS_PULL_REQUEST == 'false'
