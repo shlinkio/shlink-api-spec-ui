@@ -13,10 +13,14 @@ const loadTags = async (): Promise<string[]> =>
     .then((tags: Tag[]) => tags.map(({ name }) => name));
 
 export const useRouter = () => {
-  const { push, query } = useNextRouter();
-  const navigate = async (url: string) => push(url, url, { shallow: true });
+  const { push, query, pathname } = useNextRouter();
+  const navigate = async (url: string) => {
+    const processedUrl = url.startsWith('/') ? url : `${pathname}${url}`;
 
-  return { navigate, query };
+    return push(processedUrl, processedUrl, { shallow: true });
+  };
+
+  return { navigate, query, pathname };
 };
 
 export const useShlinkTags = (): { tags: string[]; error: boolean } => {
@@ -30,4 +34,20 @@ export const useShlinkTags = (): { tags: string[]; error: boolean } => {
   }, []);
 
   return { tags, error };
+};
+
+export const useShlinkSpecUrl = (type: 'swagger' | 'async-api', fallbackVersion?: string): string | undefined => {
+  const { query } = useRouter();
+  const [ url, setUrl ] = useState<string | undefined>();
+
+  useEffect(() => {
+    const { version } = query;
+    const versionToLoad = version || fallbackVersion;
+
+    if (versionToLoad) {
+      setUrl(`https://raw.githubusercontent.com/shlinkio/shlink/${versionToLoad}/docs/${type}/${type}.json`);
+    }
+  }, [ query, fallbackVersion ]);
+
+  return url;
 };
