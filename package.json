@@ -21,8 +21,11 @@
     "export": "npm run build && next export"
   },
   "dependencies": {
+    "@kyma-project/asyncapi-react": "^0.5.0",
     "classnames": "^2.2.6",
+    "fiori-fundamentals": "^1.7.5",
     "next": "^9.3.2",
+    "next-fonts": "^1.0.3",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "react-headroom": "^2.2.8",

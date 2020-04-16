@@ -1,16 +1,24 @@
 import React, { FunctionComponent } from 'react';
 import { useShlinkSpecUrl, useShlinkTags } from '../helpers';
 import LoadingSpec from '../components/LoadingSpec';
-import SwaggerContainer from '../components/SwaggerContainer';
 import Layout from '../components/Layout';
+import AsyncApiContainer from '../components/AsyncApiContainer';
+
+const MIN_ASYNC_API_VERSION = '2.1.0';
 
 const AsyncApi: FunctionComponent = () => {
   const { tags, error } = useShlinkTags();
-  const url = useShlinkSpecUrl('async-api', tags[0]);
+  const { url, versionToLoad } = useShlinkSpecUrl('async-api', tags[0]);
+  const versionIsTooSmall = versionToLoad && versionToLoad < MIN_ASYNC_API_VERSION;
 
   return (
     <Layout tags={tags}>
-      {!url ? <LoadingSpec withError={error} /> : <SwaggerContainer url={url} />}
+      {versionIsTooSmall && (
+        <div className="loading-spec">
+          <h2>Async API was introduced in Shlink v{MIN_ASYNC_API_VERSION}</h2>
+        </div>
+      )}
+      {!versionIsTooSmall && (!url ? <LoadingSpec withError={error} /> : <AsyncApiContainer url={url} />)}
     </Layout>
   );
 };

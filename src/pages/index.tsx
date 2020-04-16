@@ -7,7 +7,7 @@ import './index.css';
 
 const Home: FunctionComponent = () => {
   const { tags, error } = useShlinkTags();
-  const url = useShlinkSpecUrl('swagger', tags[0]);
+  const { url } = useShlinkSpecUrl('swagger', tags[0]);
 
   return (
     <Layout tags={tags}>

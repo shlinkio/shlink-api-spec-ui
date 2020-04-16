@@ -36,18 +36,30 @@ export const useShlinkTags = (): { tags: string[]; error: boolean } => {
   return { tags, error };
 };
 
-export const useShlinkSpecUrl = (type: 'swagger' | 'async-api', fallbackVersion?: string): string | undefined => {
+export const useShlinkSpecUrl = (type: 'swagger' | 'async-api', fallbackVersion?: string): {
+  url: string | undefined;
+  versionToLoad: string | undefined;
+} => {
   const { query } = useRouter();
   const [ url, setUrl ] = useState<string | undefined>();
+  const [ versionToLoad, setVersionToLoad ] = useState<string | undefined>();
 
   useEffect(() => {
     const { version } = query;
-    const versionToLoad = version || fallbackVersion;
+    const resolvedVersion = version || fallbackVersion;
 
-    if (versionToLoad) {
-      setUrl(`https://raw.githubusercontent.com/shlinkio/shlink/${versionToLoad}/docs/${type}/${type}.json`);
+    if (resolvedVersion) {
+      setVersionToLoad((resolvedVersion as string | undefined)?.substring(1));
+
+      if (type === 'swagger') {
+        setUrl(`https://raw.githubusercontent.com/shlinkio/shlink/${resolvedVersion}/docs/${type}/${type}.json`);
+      } else {
+        setUrl(
+          'https://gist.githubusercontent.com/acelaya/01e7e77eede761b66fe59d1ba1fee0ef/raw/1490624604c1eed04ecead063b4d9525a7e74ac2/async-api.yml'
+        );
+      }
     }
   }, [ query, fallbackVersion ]);
 
-  return url;
+  return { url, versionToLoad };
 };
