@@ -7,8 +7,7 @@ interface SwaggerContainerProps {
   url: string;
 }
 
-const SwaggerContainer: FunctionComponent<SwaggerContainerProps> = ({ url }) => (
-  <SwaggerUI url={url} docExpansion="list" deepLinking={true} />
-);
+const SwaggerContainer: FunctionComponent<SwaggerContainerProps> = ({ url }) =>
+  <SwaggerUI url={url} docExpansion="list" deepLinking={true} />;
 
 export default SwaggerContainer;
