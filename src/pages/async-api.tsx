@@ -4,7 +4,7 @@ import LoadingSpec from '../components/LoadingSpec';
 import Layout from '../components/Layout';
 import AsyncApiContainer from '../components/AsyncApiContainer';
 
-const MIN_ASYNC_API_VERSION = '2.1.0';
+const MIN_ASYNC_API_VERSION = '2.2.0';
 
 const AsyncApi: FunctionComponent = () => {
   const { tags, error } = useShlinkTags();

@@ -50,14 +50,7 @@ export const useShlinkSpecUrl = (type: 'swagger' | 'async-api', fallbackVersion?
 
     if (resolvedVersion) {
       setVersionToLoad((resolvedVersion as string | undefined)?.substring(1));
-
-      if (type === 'swagger') {
-        setUrl(`https://raw.githubusercontent.com/shlinkio/shlink/${resolvedVersion}/docs/${type}/${type}.json`);
-      } else {
-        setUrl(
-          'https://gist.githubusercontent.com/acelaya/01e7e77eede761b66fe59d1ba1fee0ef/raw/1490624604c1eed04ecead063b4d9525a7e74ac2/async-api.yml'
-        );
-      }
+      setUrl(`https://raw.githubusercontent.com/shlinkio/shlink/${resolvedVersion}/docs/${type}/${type}.json`);
     }
   }, [ query, fallbackVersion ]);
 
