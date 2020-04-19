@@ -3,7 +3,6 @@ import { useShlinkSpecUrl, useShlinkTags } from '../helpers';
 import LoadingSpec from '../components/LoadingSpec';
 import SwaggerContainer from '../components/SwaggerContainer';
 import Layout from '../components/Layout';
-import './index.css';
 
 const Home: FunctionComponent = () => {
   const { tags, error } = useShlinkTags();
