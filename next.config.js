@@ -3,6 +3,7 @@ const withFonts = require('next-fonts');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 module.exports = withFonts(withCSS({
+  exportTrailingSlash: true, // Makes pages to be exported as index.html files
   webpack(config) {
     config.optimization.minimizer = config.optimization.minimizer || [];
     config.optimization.minimizer.push(new OptimizeCSSAssetsPlugin({}));
