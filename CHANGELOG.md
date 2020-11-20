@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ## [Unreleased]
 ### Added
-* *Nothing*
+* [#21](https://github.com/shlinkio/shlink-api-spec-ui/issues/21) Added github action to build docker image.
 
 ### Changed
 * [#18](https://github.com/shlinkio/shlink-api-spec-ui/issues/18) Updated to NextJS 10.
@@ -20,7 +20,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 * *Nothing*
 
 ### Fixed
-* *Nothing*
+* [#22](https://github.com/shlinkio/shlink-api-spec-ui/issues/22) Fixed word wrap on long texts.
 
 
 ## [1.4.1] - 2020-04-23
