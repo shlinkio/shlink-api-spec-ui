@@ -21,7 +21,7 @@
     "export": "npm run build && next export"
   },
   "dependencies": {
-    "@kyma-project/asyncapi-react": "^0.5.0",
+    "@kyma-project/asyncapi-react": "^0.6.2",
     "classnames": "^2.2.6",
     "fiori-fundamentals": "^1.7.5",
     "next": "^10.0.2",
@@ -36,7 +36,7 @@
     "@shlinkio/eslint-config-js-coding-standard": "^1.0.1",
     "@types/classnames": "^2.2.9",
     "@types/next": "^9.0.0",
-    "@types/node": "^12.7.2",
+    "@types/node": "^14.14.8",
     "@types/optimize-css-assets-webpack-plugin": "^5.0.0",
     "@types/react": "^16.9.56",
     "@types/react-headroom": "^2.2.1",
@@ -49,6 +49,6 @@
     "stylelint": "^10.1.0",
     "stylelint-config-adidas": "^1.2.1",
     "stylelint-config-adidas-bem": "^1.2.0",
-    "typescript": "~3.8.3"
+    "typescript": "^4.0.5"
   }
 }
