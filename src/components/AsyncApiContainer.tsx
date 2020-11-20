@@ -7,6 +7,7 @@ interface AsyncApiContainerProps {
   url: string;
 }
 
-const AsyncApiContainer: FunctionComponent<AsyncApiContainerProps> = ({ url }) => <AsyncApi schema={{ url }} />;
+const AsyncApiContainer: FunctionComponent<AsyncApiContainerProps> = ({ url }) =>
+  <AsyncApi schema={{ url }} config={{ showErrors: process.env.NODE_ENV !== 'production' }} />;
 
 export default AsyncApiContainer;
