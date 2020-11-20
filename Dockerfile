@@ -3,7 +3,7 @@ COPY . /shlink-api-spec
 RUN cd /shlink-api-spec && \
     npm install && \
     npm run export && \
-    rm -r out/404 out/index
+    rm -r out/404
 
 FROM nginx:1.19.4-alpine
 LABEL maintainer="Alejandro Celaya <alejandro@alejandrocelaya.com>"
