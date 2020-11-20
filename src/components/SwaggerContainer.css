@@ -1,3 +1,7 @@
 .swagger-container__swagger-ui {
   margin-top: 80px;
 }
+
+.swagger-ui .url {
+  word-wrap: break-word;
+}
