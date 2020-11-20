@@ -29,8 +29,8 @@
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-headroom": "^2.2.8",
-    "swagger-ui": "^3.24.3",
-    "swagger-ui-react": "^3.24.3"
+    "swagger-ui": "^3.37.0",
+    "swagger-ui-react": "^3.37.0"
   },
   "devDependencies": {
     "@shlinkio/eslint-config-js-coding-standard": "^1.0.1",
@@ -40,7 +40,7 @@
     "@types/optimize-css-assets-webpack-plugin": "^5.0.1",
     "@types/react": "^16.9.56",
     "@types/react-headroom": "^2.2.1",
-    "@types/swagger-ui-react": "^3.23.0",
+    "@types/swagger-ui-react": "^3.35.0",
     "@zeit/next-css": "^1.0.1",
     "babel-eslint": "^10.1.0",
     "eslint": "^7.13.0",
