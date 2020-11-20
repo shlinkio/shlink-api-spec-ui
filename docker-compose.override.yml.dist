@@ -1,9 +1,9 @@
 version: '3'
 
 services:
-    shlink_api_spec_ui:
-        user: 1000:1000
-        volumes:
-            - /etc/passwd:/etc/passwd:ro
-            - /etc/group:/etc/group:ro
-            - ./home:/home/alejandro
+  shlink_api_spec_ui:
+    user: 1000:1000
+    volumes:
+      - /etc/passwd:/etc/passwd:ro
+      - /etc/group:/etc/group:ro
+      - ./home:/home/alejandro

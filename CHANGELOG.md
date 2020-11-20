@@ -4,186 +4,156 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org).
 
-## 1.4.1 - 2020-04-23
-
-#### Added
-
+## [Unreleased]
+### Added
 * *Nothing*
 
-#### Changed
+### Changed
+* [#18](https://github.com/shlinkio/shlink-api-spec-ui/issues/18) Updated to NextJS 10.
+* [#20](https://github.com/shlinkio/shlink-api-spec-ui/issues/20) Updated project dependencies.
 
+### Deprecated
 * *Nothing*
 
-#### Deprecated
-
+### Removed
 * *Nothing*
 
-#### Removed
-
+### Fixed
 * *Nothing*
 
-#### Fixed
 
+## [1.4.1] - 2020-04-23
+### Added
+* *Nothing*
+
+### Changed
+* *Nothing*
+
+### Deprecated
+* *Nothing*
+
+### Removed
+* *Nothing*
+
+### Fixed
 * [#14](https://github.com/shlinkio/shlink-api-spec-ui/issues/14) Fixed `/async-api` path resulting in a 404 when loaded synchronously from the server.
 
 
-## 1.4.0 - 2020-04-19
-
-#### Added
-
+## [1.4.0] - 2020-04-19
+### Added
 * Added page for async API spec
 
-#### Changed
-
+### Changed
 * *Nothing*
 
-#### Deprecated
-
+### Deprecated
 * *Nothing*
 
-#### Removed
-
+### Removed
 * *Nothing*
 
-#### Fixed
-
+### Fixed
 * *Nothing*
 
 
-## 1.3.0 - 2020-03-31
-
-#### Added
-
+## [1.3.0] - 2020-03-31
+### Added
 * Updated to [next.js](https://nextjs.org/) security patch, v9.3.2
 * Configured docker image build as part of regular travis build.
 
-#### Changed
-
+### Changed
 * *Nothing*
 
-#### Deprecated
-
+### Deprecated
 * *Nothing*
 
-#### Removed
-
+### Removed
 * *Nothing*
 
-#### Fixed
-
+### Fixed
 * *Nothing*
 
 
-## 1.2.0 - 2020-03-10
-
-#### Added
-
+## [1.2.0] - 2020-03-10
+### Added
 * Updated dependencies, including [next.js](https://nextjs.org/) to v9.3
 
-#### Changed
-
+### Changed
 * *Nothing*
 
-#### Deprecated
-
+### Deprecated
 * *Nothing*
 
-#### Removed
-
+### Removed
 * *Nothing*
 
-#### Fixed
-
+### Fixed
 * [#8](https://github.com/shlinkio/shlink-api-spec-ui/issues/8) Fixed logo path.
 
 
-## 1.1.1 - 2019-11-30
-
-#### Added
-
+## [1.1.1] - 2019-11-30
+### Added
 * *Nothing*
 
-#### Changed
-
+### Changed
 * *Nothing*
 
-#### Deprecated
-
+### Deprecated
 * *Nothing*
 
-#### Removed
-
+### Removed
 * *Nothing*
 
-#### Fixed
-
+### Fixed
 * Fixed security issues on outdated dependencies.
 
 
-## 1.1.0 - 2019-09-06
-
-#### Added
-
+## [1.1.0] - 2019-09-06
+### Added
 * [#5](https://github.com/shlinkio/shlink-api-spec-ui/issues/5) Selected API version is now set as a query param.
 
-#### Changed
-
+### Changed
 * *Nothing*
 
-#### Deprecated
-
+### Deprecated
 * *Nothing*
 
-#### Removed
-
+### Removed
 * *Nothing*
 
-#### Fixed
-
+### Fixed
 * *Nothing*
 
 
-## 1.0.1 - 2019-09-04
-
-#### Added
-
+## [1.0.1] - 2019-09-04
+### Added
 * [#2](https://github.com/shlinkio/shlink-api-spec-ui/issues/2) Added css style checks with stylelint.
 
-#### Changed
-
+### Changed
 * *Nothing*
 
-#### Deprecated
-
+### Deprecated
 * *Nothing*
 
-#### Removed
-
+### Removed
 * *Nothing*
 
-#### Fixed
-
+### Fixed
 * [#1](https://github.com/shlinkio/shlink-api-spec-ui/issues/1) Fixed deep links not working.
 
 
-## 1.0.0 - 2019-08-31
-
-#### Added
-
+## [1.0.0] - 2019-08-31
+### Added
 * First stable release
 
-#### Changed
-
+### Changed
 * *Nothing*
 
-#### Deprecated
-
+### Deprecated
 * *Nothing*
 
-#### Removed
-
+### Removed
 * *Nothing*
 
-#### Fixed
-
+### Fixed
 * *Nothing*
