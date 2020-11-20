@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 ### Changed
 * [#18](https://github.com/shlinkio/shlink-api-spec-ui/issues/18) Updated to NextJS 10.
 * [#20](https://github.com/shlinkio/shlink-api-spec-ui/issues/20) Updated project dependencies.
+* [#19](https://github.com/shlinkio/shlink-api-spec-ui/issues/19) Updated to latest swagger-ui-react, which supports deeplinking, and therefore allows removing custom component.
 
 ### Deprecated
 * *Nothing*
