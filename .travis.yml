@@ -16,10 +16,3 @@ install:
 script:
   - npm run lint
   - if [[ $TRAVIS_PULL_REQUEST != 'false' ]]; then docker build -t shlink-website:test . ; fi
-
-deploy:
-  - provider: script
-    script: bash ./scripts/docker/build
-    on:
-      all_branches: true
-      condition: $TRAVIS_PULL_REQUEST == 'false'
