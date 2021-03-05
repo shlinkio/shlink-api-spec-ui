@@ -46,7 +46,7 @@ export const useShlinkSpecUrl = (type: 'swagger' | 'async-api', fallbackVersion?
 
   useEffect(() => {
     const { version } = query;
-    const resolvedVersion = version || fallbackVersion;
+    const resolvedVersion = version ?? fallbackVersion;
 
     if (resolvedVersion) {
       setVersionToLoad((resolvedVersion as string | undefined)?.substring(1));

@@ -33,7 +33,7 @@
     "swagger-ui-react": "^3.37.0"
   },
   "devDependencies": {
-    "@shlinkio/eslint-config-js-coding-standard": "^1.0.1",
+    "@shlinkio/eslint-config-js-coding-standard": "~1.2.2",
     "@types/classnames": "^2.2.9",
     "@types/next": "^9.0.0",
     "@types/node": "^14.14.8",
