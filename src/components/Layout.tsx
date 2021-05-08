@@ -3,8 +3,6 @@ import Head from 'next/head';
 import { useRouter } from '../helpers';
 import Header from './Header';
 import Menu from './Menu';
-import '@asyncapi/react-component/styles/default.min.css';
-import 'swagger-ui-react/swagger-ui.css';
 import './SwaggerContainer.css';
 import './Layout.css';
 
