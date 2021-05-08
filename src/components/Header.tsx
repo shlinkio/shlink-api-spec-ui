@@ -19,7 +19,7 @@ const Header: FunctionComponent<HeaderProps> = ({ setTag, tags }) => {
   }, [ query ]);
 
   return (
-    <Headroom>
+    <Headroom style={{ zIndex: 99 }}>
       <header className="header swagger-ui">
         <div className="wrapper">
           <h2 className="header__title">
