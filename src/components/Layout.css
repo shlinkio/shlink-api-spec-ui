@@ -1,3 +1,6 @@
+@import '~@asyncapi/react-component/styles/default.css';
+@import '~swagger-ui-react/swagger-ui.css';
+
 body,
 html {
   margin: 0;

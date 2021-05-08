@@ -4,9 +4,9 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org).
 
-## [Unreleased]
+## [1.6.0] - 2021-05-08
 ### Added
-* *Nothing*
+* [#23](https://github.com/shlinkio/shlink-api-spec-ui/issues/23) Updated to official async-api component.
 
 ### Changed
 * Migrated build to Github Actions

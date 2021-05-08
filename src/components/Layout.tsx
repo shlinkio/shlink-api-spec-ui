@@ -3,10 +3,6 @@ import Head from 'next/head';
 import { useRouter } from '../helpers';
 import Header from './Header';
 import Menu from './Menu';
-import '@kyma-project/asyncapi-react/lib/styles/fiori.css';
-import 'fiori-fundamentals/dist/fonts.css';
-import 'swagger-ui-react/swagger-ui.css';
-import './AsyncApiContainer.css';
 import './SwaggerContainer.css';
 import './Layout.css';
 
