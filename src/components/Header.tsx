@@ -2,7 +2,6 @@ import React, { ChangeEvent, FunctionComponent, useEffect, useState } from 'reac
 import Headroom from 'react-headroom';
 import { useRouter } from '../helpers';
 import ShlinkLogo from './ShlinkLogo';
-import './Header.css';
 
 export interface HeaderProps {
   setTag: (newTag: string) => void;

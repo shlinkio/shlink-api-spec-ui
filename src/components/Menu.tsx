@@ -1,6 +1,5 @@
 import React, { FunctionComponent } from 'react';
 import Link from 'next/link';
-import './Menu.css';
 import { useRouter } from '../helpers';
 
 const Menu: FunctionComponent = () => {
