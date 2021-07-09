@@ -1,6 +1,5 @@
 import React, { FunctionComponent } from 'react';
 import classNames from 'classnames';
-import './LoadingSpec.css';
 
 interface LoadingSpecProps {
   withError?: boolean;
