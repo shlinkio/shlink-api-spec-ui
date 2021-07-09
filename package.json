@@ -43,6 +43,7 @@
     "css-minimizer-webpack-plugin": "^3.0.2",
     "eslint": "^7.30.0",
     "eslint-loader": "^4.0.2",
+    "postcss": "^8.3.5",
     "stylelint": "^13.13.1",
     "stylelint-config-adidas": "^1.3.0",
     "stylelint-config-adidas-bem": "^1.2.0",

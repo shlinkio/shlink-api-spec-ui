@@ -9,4 +9,7 @@ module.exports = withFonts({
 
     return config;
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 });
