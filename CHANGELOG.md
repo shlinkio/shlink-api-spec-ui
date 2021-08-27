@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [1.7.1] - 2021-08-27
+### Added
+* *Nothing*
+
+### Changed
+* [#47](https://github.com/shlinkio/shlink-api-spec-ui/issues/47) Updated to next.js 11.1.
+
+### Deprecated
+* *Nothing*
+
+### Removed
+* *Nothing*
+
+### Fixed
+* [#46](https://github.com/shlinkio/shlink-api-spec-ui/issues/46) Ensured stable versions are selected by default
+
+
 ## [1.7.0] - 2021-07-09
 ### Added
 * [#23](https://github.com/shlinkio/shlink-api-spec-ui/issues/23) Updated dependencies, including next.js 11.
