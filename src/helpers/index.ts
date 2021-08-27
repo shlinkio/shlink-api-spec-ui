@@ -1,6 +1,6 @@
+import { ParsedUrlQuery } from 'querystring';
 import { useRouter as useNextRouter } from 'next/router';
 import { useEffect, useState } from 'react';
-import { ParsedUrlQuery } from 'querystring';
 
 const SHLINK_TAGS_ENDPOINT = 'https://api.github.com/repos/shlinkio/shlink/tags';
 
