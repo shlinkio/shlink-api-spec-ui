@@ -1,5 +1,6 @@
 import { useRouter as useNextRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import { ParsedUrlQuery } from 'querystring';
 
 const SHLINK_TAGS_ENDPOINT = 'https://api.github.com/repos/shlinkio/shlink/tags';
 
@@ -36,23 +37,36 @@ export const useShlinkTags = (): { tags: string[]; error: boolean } => {
   return { tags, error };
 };
 
-export const useShlinkSpecUrl = (type: 'swagger' | 'async-api', fallbackVersion?: string): {
+export const useResolveVersion = (query: ParsedUrlQuery, tags: string[]): string | undefined => {
+  const [ resolvedVersion, setResolvedVersion ] = useState('');
+
+  useEffect(() => {
+    const { version } = query;
+
+    setResolvedVersion(`${version ?? tags.find((tag) => !tag.includes('alpha') && !tag.includes('beta'))}`);
+  }, [ query, tags ]);
+
+  return resolvedVersion;
+};
+
+export const useShlinkSpecUrl = (type: 'swagger' | 'async-api'): {
   url: string | undefined;
   versionToLoad: string | undefined;
+  tags: string[];
+  tagsError: boolean;
 } => {
   const { query } = useRouter();
   const [ url, setUrl ] = useState<string | undefined>();
   const [ versionToLoad, setVersionToLoad ] = useState<string | undefined>();
+  const { tags, error } = useShlinkTags();
+  const resolvedVersion = useResolveVersion(query, tags);
 
   useEffect(() => {
-    const { version } = query;
-    const resolvedVersion = version ?? fallbackVersion;
-
     if (resolvedVersion) {
       setVersionToLoad((resolvedVersion as string | undefined)?.substring(1));
       setUrl(`https://raw.githubusercontent.com/shlinkio/shlink/${resolvedVersion}/docs/${type}/${type}.json`);
     }
-  }, [ query, fallbackVersion ]);
+  }, [ resolvedVersion ]);
 
-  return { url, versionToLoad };
+  return { url, versionToLoad, tags, tagsError: error };
 };

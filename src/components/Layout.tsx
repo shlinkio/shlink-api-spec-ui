@@ -17,7 +17,7 @@ const Layout: FunctionComponent<LayoutProps> = ({ children, tags }) => {
   return (
     <div>
       <Head>
-        <title>Shlink - Open API spec UI</title>
+        <title>Shlink — Open API spec UI</title>
         <meta name="description" content="A self-hosted and PHP-based URL shortener with CLI and REST interfaces" />
         <meta name="theme-color" content="#4696e5" />
         <link rel="icon" type="image/x-icon" href={BASE64_FAVICON} />

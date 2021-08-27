@@ -1,16 +1,15 @@
 import React, { FunctionComponent } from 'react';
-import { useShlinkSpecUrl, useShlinkTags } from '../helpers';
+import { useShlinkSpecUrl } from '../helpers';
 import LoadingSpec from '../components/LoadingSpec';
 import SwaggerContainer from '../components/SwaggerContainer';
 import Layout from '../components/Layout';
 
 const Home: FunctionComponent = () => {
-  const { tags, error } = useShlinkTags();
-  const { url } = useShlinkSpecUrl('swagger', tags[0]);
+  const { url, tags, tagsError } = useShlinkSpecUrl('swagger');
 
   return (
     <Layout tags={tags}>
-      {!url ? <LoadingSpec withError={error} /> : <SwaggerContainer url={url} />}
+      {!url ? <LoadingSpec withError={tagsError} /> : <SwaggerContainer url={url} />}
     </Layout>
   );
 };
