@@ -1,6 +1,6 @@
 import React, { ChangeEvent, FunctionComponent, useEffect, useState } from 'react';
 import Headroom from 'react-headroom';
-import { useRouter } from '../helpers';
+import { useResolveVersion, useRouter } from '../helpers';
 import ShlinkLogo from './ShlinkLogo';
 
 export interface HeaderProps {
@@ -11,11 +11,12 @@ export interface HeaderProps {
 const Header: FunctionComponent<HeaderProps> = ({ setTag, tags }) => {
   const { query } = useRouter();
   const [ activeTag, setActiveTag ] = useState('');
+  const resolvedVersion = useResolveVersion(query, tags);
   const onTagChange = ({ target }: ChangeEvent<HTMLSelectElement>) => setTag(target.value);
 
   useEffect(() => {
-    setActiveTag(String(query.version));
-  }, [ query ]);
+    setActiveTag(`${resolvedVersion}`);
+  }, [ resolvedVersion ]);
 
   return (
     <Headroom style={{ zIndex: 99 }}>
