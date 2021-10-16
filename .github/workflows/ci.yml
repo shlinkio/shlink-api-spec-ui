@@ -7,21 +7,8 @@ on:
       - main
 
 jobs:
-  lint:
-    runs-on: ubuntu-20.04
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - name: Use node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: 14.15
-      - run: npm ci
-      - run: npm run lint
-
-  build-docker-image:
-    runs-on: ubuntu-20.04
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v2
-      - run: docker build -t shlink-api-spec-ui:test .
+  ci:
+    uses: shlinkio/github-actions/.github/workflows/web-app-ci.yml@main
+    with:
+      node-version: 14.17
+      with-unit-tests: false
