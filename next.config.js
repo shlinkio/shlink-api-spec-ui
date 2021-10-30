@@ -1,14 +1,8 @@
 const withFonts = require('next-fonts');
-const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
 module.exports = withFonts({
   trailingSlash: true, // Makes pages to be exported as index.html files
-  webpack(config) {
-    config.plugins = config.plugins || [];
-    config.plugins.push(new CssMinimizerPlugin({}));
-
-    return config;
-  },
+  swcMinify: true, // This will make compiled assets to be minified via SWC instead of webpack plugin
   eslint: {
     ignoreDuringBuilds: true,
   },

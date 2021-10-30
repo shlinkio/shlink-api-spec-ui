@@ -1,6 +1,6 @@
 {
   "name": "shlink-api-spec-ui",
-  "description": "Shlink project Swagger UI toload shlink specs",
+  "description": "Web UI to load Shlink's sync and async API specs",
   "author": "Alejandro Celaya Alastrué",
   "readmeFilename": "README.md",
   "private": false,
@@ -23,7 +23,7 @@
   "dependencies": {
     "@asyncapi/react-component": "^1.0.0-next.12",
     "classnames": "^2.3.1",
-    "next": "^11.1.0",
+    "next": "^12.0.1",
     "next-fonts": "^1.5.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -34,13 +34,10 @@
   "devDependencies": {
     "@shlinkio/eslint-config-js-coding-standard": "~1.2.2",
     "@types/classnames": "^2.3.1",
-    "@types/css-minimizer-webpack-plugin": "^3.0.2",
-    "@types/node": "^14.17.5",
+    "@types/node": "^16.11.6",
     "@types/react": "^17.0.14",
     "@types/react-headroom": "^2.2.2",
     "@types/swagger-ui-react": "^3.35.2",
-    "babel-eslint": "^10.1.0",
-    "css-minimizer-webpack-plugin": "^3.0.2",
     "eslint": "^7.30.0",
     "eslint-loader": "^4.0.2",
     "postcss": "^8.3.5",
