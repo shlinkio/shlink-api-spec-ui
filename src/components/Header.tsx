@@ -15,7 +15,7 @@ const Header: FunctionComponent<HeaderProps> = ({ setTag, tags }) => {
   const onTagChange = ({ target }: ChangeEvent<HTMLSelectElement>) => setTag(target.value);
 
   useEffect(() => {
-    setActiveTag(`${resolvedVersion}`);
+    resolvedVersion && setActiveTag(resolvedVersion);
   }, [ resolvedVersion ]);
 
   return (
