@@ -19,7 +19,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 * *Nothing*
 
 ### Fixed
-* *Nothing*
+* [#53](https://github.com/shlinkio/shlink-api-spec-ui/issues/53) Fixed random error loading swagger when versions are not fully loaded, due to a casting of `undefined` to string.
 
 
 ## [1.7.1] - 2021-08-27
