@@ -25,7 +25,7 @@ export const useRouter = () => {
 };
 
 export const useShlinkTags = (): { tags: string[]; error: boolean } => {
-  const [ tags, setTags ] = useState([] as string[]);
+  const [ tags, setTags ] = useState<string[]>([]);
   const [ error, setError ] = useState(false);
 
   useEffect(() => {
@@ -38,12 +38,13 @@ export const useShlinkTags = (): { tags: string[]; error: boolean } => {
 };
 
 export const useResolveVersion = (query: ParsedUrlQuery, tags: string[]): string | undefined => {
-  const [ resolvedVersion, setResolvedVersion ] = useState('');
+  const [ resolvedVersion, setResolvedVersion ] = useState<string | undefined>();
 
   useEffect(() => {
     const { version } = query;
+    const stringVersion = version as string | undefined
 
-    setResolvedVersion(`${version ?? tags.find((tag) => !tag.includes('alpha') && !tag.includes('beta'))}`);
+    setResolvedVersion(stringVersion ?? tags.find((tag) => !tag.includes('alpha') && !tag.includes('beta')));
   }, [ query, tags ]);
 
   return resolvedVersion;

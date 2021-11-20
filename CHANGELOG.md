@@ -4,13 +4,13 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org).
 
-## [Unreleased]
+## [1.8.0] - 2021-11-20
 ### Added
 * *Nothing*
 
 ### Changed
 * Moved ci workflow to external repo and reused
-* Updated dependencies, including node 16 and Next.js 12
+* Updated dependencies, including node 16, Next.js 12 and Swagger UI 4
 
 ### Deprecated
 * *Nothing*
@@ -19,7 +19,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 * *Nothing*
 
 ### Fixed
-* *Nothing*
+* [#53](https://github.com/shlinkio/shlink-api-spec-ui/issues/53) Fixed random error loading swagger when versions are not fully loaded, due to a casting of `undefined` to string.
 
 
 ## [1.7.1] - 2021-08-27

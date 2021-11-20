@@ -28,17 +28,16 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-headroom": "^3.2.0",
-    "swagger-ui": "^3.52.5",
-    "swagger-ui-react": "^3.52.5"
+    "swagger-ui": "^4.1.0",
+    "swagger-ui-react": "^4.1.0"
   },
   "devDependencies": {
     "@shlinkio/eslint-config-js-coding-standard": "~1.2.2",
-    "@types/classnames": "^2.3.1",
     "@types/node": "^16.11.6",
     "@types/react": "^17.0.33",
     "@types/react-headroom": "^2.2.2",
     "@types/swagger-ui-react": "^3.35.3",
-    "eslint": "8.1.0",
+    "eslint": "^8.1.0",
     "eslint-loader": "^4.0.2",
     "postcss": "^8.3.11",
     "stylelint": "^13.13.1",
