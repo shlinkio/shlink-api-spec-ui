@@ -10,7 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 
 ### Changed
 * Moved ci workflow to external repo and reused
-* Updated dependencies, including node 16 and Next.js 12
+* Updated dependencies, including node 16, Next.js 12 and Swagger UI 4
 
 ### Deprecated
 * *Nothing*
