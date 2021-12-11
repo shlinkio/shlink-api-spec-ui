@@ -1,6 +1,7 @@
 import { ParsedUrlQuery } from 'querystring';
 import { useRouter as useNextRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import { compare } from 'compare-versions';
 
 const SHLINK_TAGS_ENDPOINT = 'https://api.github.com/repos/shlinkio/shlink/tags';
 
@@ -50,6 +51,14 @@ export const useResolveVersion = (query: ParsedUrlQuery, tags: string[]): string
   return resolvedVersion;
 };
 
+const resolveSwaggerUrl = (version: string) => compare('v2.10.0', version, '>')
+  ? `https://raw.githubusercontent.com/shlinkio/shlink/${version}/docs/swagger/swagger.json`
+  : `https://shlinkio.github.io/shlink-open-api-specs/specs/${version}/oas.json`;
+
+const resolveSpecUrl = (version: string, type: 'swagger' | 'async-api') => type === 'swagger'
+  ? resolveSwaggerUrl(version)
+  : `https://raw.githubusercontent.com/shlinkio/shlink/${version}/docs/async-api/async-api.json`;
+
 export const useShlinkSpecUrl = (type: 'swagger' | 'async-api'): {
   url: string | undefined;
   versionToLoad: string | undefined;
@@ -65,7 +74,7 @@ export const useShlinkSpecUrl = (type: 'swagger' | 'async-api'): {
   useEffect(() => {
     if (resolvedVersion) {
       setVersionToLoad((resolvedVersion as string | undefined)?.substring(1));
-      setUrl(`https://raw.githubusercontent.com/shlinkio/shlink/${resolvedVersion}/docs/${type}/${type}.json`);
+      setUrl(resolveSpecUrl(resolvedVersion, type));
     }
   }, [ resolvedVersion ]);
 
