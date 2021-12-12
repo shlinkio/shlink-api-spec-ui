@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [1.9.1] - 2021-12-12
+### Added
+* *Nothing*
+
+### Changed
+* *Nothing*
+
+### Deprecated
+* *Nothing*
+
+### Removed
+* *Nothing*
+
+### Fixed
+* [#61](https://github.com/shlinkio/shlink-api-spec-ui/issues/61) Fixed error when trying to load Async API spec fo v2.10.0 due to wrong version comparison.
+
+
 ## [1.9.0] - 2021-12-11
 ### Added
 * [#57](https://github.com/shlinkio/shlink-api-spec-ui/issues/57) Added support to download oas spec from shlinkio/shlink-open-api-specs repo for versions that support it.
