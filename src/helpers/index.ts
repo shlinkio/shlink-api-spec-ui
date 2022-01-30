@@ -51,9 +51,9 @@ export const useResolveVersion = (query: ParsedUrlQuery, tags: string[]): string
   return resolvedVersion;
 };
 
-const resolveSwaggerUrl = (version: string) => compare('v2.10.0', version, '>')
+const resolveSwaggerUrl = (version: string) => compare('v2.2.0', version, '>')
   ? `https://raw.githubusercontent.com/shlinkio/shlink/${version}/docs/swagger/swagger.json`
-  : `https://shlinkio.github.io/shlink-open-api-specs/specs/${version}/oas.json`;
+  : `https://raw.githubusercontent.com/shlinkio/shlink-open-api-specs/main/specs/${version}/open-api-spec.json`;
 
 const resolveSpecUrl = (version: string, type: 'swagger' | 'async-api') => type === 'swagger'
   ? resolveSwaggerUrl(version)

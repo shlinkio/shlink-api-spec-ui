@@ -4,6 +4,24 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [1.9.2] - 2022-01-30
+### Added
+* *Nothing*
+
+### Changed
+* *Nothing*
+
+### Deprecated
+* *Nothing*
+
+### Removed
+* *Nothing*
+
+### Fixed
+* [#62](https://github.com/shlinkio/shlink-api-spec-ui/issues/62) Moved from GitHub pages to load oas specs to raw.githubcontent.com, avoiding the delay when new versions are published.
+* [#64](https://github.com/shlinkio/shlink-api-spec-ui/issues/64) Changed the name used to load OAS files, to bypass ad blockers.
+
+
 ## [1.9.1] - 2021-12-12
 ### Added
 * *Nothing*
