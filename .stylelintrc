@@ -1,6 +1,5 @@
 {
   "extends": [
-    "stylelint-config-adidas",
-    "stylelint-config-adidas-bem"
+    "@shlinkio/stylelint-config-css-coding-standard"
   ]
 }

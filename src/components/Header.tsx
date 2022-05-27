@@ -10,13 +10,13 @@ export interface HeaderProps {
 
 const Header: FunctionComponent<HeaderProps> = ({ setTag, tags }) => {
   const { query } = useRouter();
-  const [ activeTag, setActiveTag ] = useState('');
+  const [activeTag, setActiveTag] = useState('');
   const resolvedVersion = useResolveVersion(query, tags);
   const onTagChange = ({ target }: ChangeEvent<HTMLSelectElement>) => setTag(target.value);
 
   useEffect(() => {
     resolvedVersion && setActiveTag(resolvedVersion);
-  }, [ resolvedVersion ]);
+  }, [resolvedVersion]);
 
   return (
     <Headroom style={{ zIndex: 99 }}>
