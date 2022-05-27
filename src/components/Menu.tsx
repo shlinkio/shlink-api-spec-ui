@@ -5,7 +5,7 @@ import { useRouter } from '../helpers';
 const Menu: FunctionComponent = () => {
   const { pathname, query } = useRouter();
   const { version } = query;
-  const buildPath = (path: string): string => version ? `${path}?version=${version}` : path;
+  const buildPath = (path: string): string => (version ? `${path}?version=${version}` : path);
 
   return (
     <div className="menu">

@@ -3,7 +3,7 @@ version: '3'
 services:
   shlink_api_spec_ui:
     container_name: shlink_api_spec_ui
-    image: node:16.13-alpine
+    image: node:16.15-alpine
     command: /bin/sh -c "cd /shlink-api-spec && npm install && npm run dev"
     volumes:
       - ./:/shlink-api-spec

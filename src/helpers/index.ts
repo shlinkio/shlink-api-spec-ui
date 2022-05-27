@@ -26,8 +26,8 @@ export const useRouter = () => {
 };
 
 export const useShlinkTags = (): { tags: string[]; error: boolean } => {
-  const [ tags, setTags ] = useState<string[]>([]);
-  const [ error, setError ] = useState(false);
+  const [tags, setTags] = useState<string[]>([]);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     loadTags()
@@ -39,25 +39,25 @@ export const useShlinkTags = (): { tags: string[]; error: boolean } => {
 };
 
 export const useResolveVersion = (query: ParsedUrlQuery, tags: string[]): string | undefined => {
-  const [ resolvedVersion, setResolvedVersion ] = useState<string | undefined>();
+  const [resolvedVersion, setResolvedVersion] = useState<string | undefined>();
 
   useEffect(() => {
     const { version } = query;
-    const stringVersion = version as string | undefined
+    const stringVersion = version as string | undefined;
 
     setResolvedVersion(stringVersion ?? tags.find((tag) => !tag.includes('alpha') && !tag.includes('beta')));
-  }, [ query, tags ]);
+  }, [query, tags]);
 
   return resolvedVersion;
 };
 
-const resolveSwaggerUrl = (version: string) => compare('v2.2.0', version, '>')
+const resolveSwaggerUrl = (version: string) => (compare('v2.2.0', version, '>')
   ? `https://raw.githubusercontent.com/shlinkio/shlink/${version}/docs/swagger/swagger.json`
-  : `https://raw.githubusercontent.com/shlinkio/shlink-open-api-specs/main/specs/${version}/open-api-spec.json`;
+  : `https://raw.githubusercontent.com/shlinkio/shlink-open-api-specs/main/specs/${version}/open-api-spec.json`);
 
-const resolveSpecUrl = (version: string, type: 'swagger' | 'async-api') => type === 'swagger'
+const resolveSpecUrl = (version: string, type: 'swagger' | 'async-api') => (type === 'swagger'
   ? resolveSwaggerUrl(version)
-  : `https://raw.githubusercontent.com/shlinkio/shlink/${version}/docs/async-api/async-api.json`;
+  : `https://raw.githubusercontent.com/shlinkio/shlink/${version}/docs/async-api/async-api.json`);
 
 export const useShlinkSpecUrl = (type: 'swagger' | 'async-api'): {
   url: string | undefined;
@@ -66,8 +66,8 @@ export const useShlinkSpecUrl = (type: 'swagger' | 'async-api'): {
   tagsError: boolean;
 } => {
   const { query } = useRouter();
-  const [ url, setUrl ] = useState<string | undefined>();
-  const [ versionToLoad, setVersionToLoad ] = useState<string | undefined>();
+  const [url, setUrl] = useState<string | undefined>();
+  const [versionToLoad, setVersionToLoad] = useState<string | undefined>();
   const { tags, error } = useShlinkTags();
   const resolvedVersion = useResolveVersion(query, tags);
 
@@ -76,7 +76,7 @@ export const useShlinkSpecUrl = (type: 'swagger' | 'async-api'): {
       setVersionToLoad((resolvedVersion as string | undefined)?.substring(1));
       setUrl(resolveSpecUrl(resolvedVersion, type));
     }
-  }, [ resolvedVersion ]);
+  }, [resolvedVersion]);
 
   return { url, versionToLoad, tags, tagsError: error };
 };
