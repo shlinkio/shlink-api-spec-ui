@@ -19,6 +19,7 @@
   height: 30px;
   display: initial;
   margin-top: -3px;
+  vertical-align: middle;
 }
 
 .header__tags-list {
