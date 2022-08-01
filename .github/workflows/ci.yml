@@ -12,3 +12,4 @@ jobs:
     with:
       node-version: 16.15
       with-unit-tests: false
+      force-install: true
