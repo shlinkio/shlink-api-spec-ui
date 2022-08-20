@@ -1,8 +1,0 @@
-#!/bin/bash
-set -e
-
-REF=$1
-[[ "${REF}" == *"main"* ]] && DOCKER_TAG="latest" || DOCKER_TAG=${REF#refs/tags/v}
-
-docker build -t shlinkio/shlink-api-spec-ui:${DOCKER_TAG} .
-docker push shlinkio/shlink-api-spec-ui:${DOCKER_TAG}
