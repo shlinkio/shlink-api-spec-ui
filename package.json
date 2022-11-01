@@ -34,7 +34,7 @@
   "devDependencies": {
     "@shlinkio/eslint-config-js-coding-standard": "~2.0.2",
     "@shlinkio/stylelint-config-css-coding-standard": "~1.0.1",
-    "@types/node": "^16.11.58",
+    "@types/node": "^18.11.9",
     "@types/react": "^18.0.18",
     "@types/react-headroom": "^2.2.2",
     "@types/swagger-ui-react": "^4.11.0",
