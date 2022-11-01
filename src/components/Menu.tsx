@@ -10,11 +10,9 @@ const Menu: FunctionComponent = () => {
   return (
     <div className="menu">
       <nav>
-        <Link href={buildPath('/')}>
-          <a className={pathname.includes('async-api') ? '' : 'active'}>REST API spec</a>
-        </Link>
-        <Link href={buildPath('/async-api')}>
-          <a className={pathname.includes('async-api') ? 'active' : ''}>Async API spec</a>
+        <Link href={buildPath('/')} className={pathname.includes('async-api') ? '' : 'active'}>REST API spec</Link>
+        <Link href={buildPath('/async-api')} className={pathname.includes('async-api') ? 'active' : ''}>
+          Async API spec
         </Link>
       </nav>
     </div>
