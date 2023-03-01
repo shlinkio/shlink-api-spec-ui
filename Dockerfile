@@ -6,5 +6,6 @@ RUN cd /shlink-api-spec && \
 
 FROM nginx:1.23-alpine
 LABEL maintainer="Alejandro Celaya <alejandro@alejandrocelaya.com>"
-RUN rm -r /usr/share/nginx/html
+RUN rm -r /usr/share/nginx/html && rm /etc/nginx/conf.d/default.conf
+COPY config/docker/nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=node /shlink-api-spec/build /usr/share/nginx/html
