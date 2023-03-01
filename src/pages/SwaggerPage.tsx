@@ -1,10 +1,10 @@
-import React, { FunctionComponent } from 'react';
+import { FC } from 'react';
 import { useShlinkSpecUrl } from '../helpers';
+import Layout from '../components/Layout';
 import LoadingSpec from '../components/LoadingSpec';
 import SwaggerContainer from '../components/SwaggerContainer';
-import Layout from '../components/Layout';
 
-const Home: FunctionComponent = () => {
+export const SwaggerPage: FC = () => {
   const { url, tags, tagsError } = useShlinkSpecUrl('swagger');
 
   return (
@@ -13,5 +13,3 @@ const Home: FunctionComponent = () => {
     </Layout>
   );
 };
-
-export default Home;

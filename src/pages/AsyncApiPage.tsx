@@ -1,4 +1,4 @@
-import React, { FunctionComponent } from 'react';
+import { FunctionComponent } from 'react';
 import { compare } from 'compare-versions';
 import { useShlinkSpecUrl } from '../helpers';
 import LoadingSpec from '../components/LoadingSpec';
@@ -7,7 +7,7 @@ import AsyncApiContainer from '../components/AsyncApiContainer';
 
 const MIN_ASYNC_API_VERSION = '2.2.0';
 
-const AsyncApi: FunctionComponent = () => {
+export const AsyncApiPage: FunctionComponent = () => {
   const { url, versionToLoad, tags, tagsError } = useShlinkSpecUrl('async-api');
   const versionIsTooSmall = versionToLoad && compare(versionToLoad, MIN_ASYNC_API_VERSION, '<');
 
@@ -22,5 +22,3 @@ const AsyncApi: FunctionComponent = () => {
     </Layout>
   );
 };
-
-export default AsyncApi;

@@ -1,8 +1,6 @@
-import React, { FunctionComponent } from 'react';
-import dynamic from 'next/dynamic';
-
-// @ts-expect-error TS def not supported
-const AsyncApi = dynamic(() => import('@asyncapi/react-component/browser'), { ssr: false }); // Async API cannot be server-side rendered
+import { FunctionComponent } from 'react';
+// @ts-expect-error - TODO
+import AsyncApi from '@asyncapi/react-component/browser';
 
 const asyncApiConfig = {
   show: { errors: process.env.NODE_ENV !== 'production' },
@@ -19,7 +17,6 @@ const AsyncApiContainer: FunctionComponent<AsyncApiContainerProps> = ({ url }) =
 
   return (
     <div style={{ width: '100%', maxWidth: '1484px', margin: '0 auto' }}>
-      {/* @ts-expect-error TS def not supported */}
       <AsyncApi schema={{ url }} config={asyncApiConfig} />
     </div>
   );

@@ -1,7 +1,5 @@
-import React, { FunctionComponent } from 'react';
-import dynamic from 'next/dynamic';
-
-const SwaggerUI = dynamic(() => import('swagger-ui-react'), { ssr: false }); // Swagger UI cannot be server-side rendered
+import { FunctionComponent } from 'react';
+import SwaggerUI from 'swagger-ui-react';
 
 interface SwaggerContainerProps {
   url: string;

@@ -1,4 +1,4 @@
-import React, { ChangeEvent, FunctionComponent, useEffect, useState } from 'react';
+import { ChangeEvent, FunctionComponent, useEffect, useState } from 'react';
 import Headroom from 'react-headroom';
 import { useResolveVersion, useRouter } from '../helpers';
 import ShlinkLogo from './ShlinkLogo';
