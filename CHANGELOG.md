@@ -4,6 +4,24 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [2.0.0] - 2023-03-01
+### Added
+* *Nothing*
+
+### Changed
+* [#86](https://github.com/shlinkio/shlink-api-spec-ui/issues/86) Migrate from Next.js to vite + react-router.
+* [#88](https://github.com/shlinkio/shlink-api-spec-ui/issues/88) Update to latest swagger-ui.
+
+### Deprecated
+* *Nothing*
+
+### Removed
+* *Nothing*
+
+### Fixed
+* *Nothing*
+
+
 ## [1.12.1] - 2022-11-24
 ### Added
 * *Nothing*
