@@ -1,7 +1,6 @@
-import { ParsedUrlQuery } from 'querystring';
-import { useRouter as useNextRouter } from 'next/router';
-import { useEffect, useState } from 'react';
 import { compare } from 'compare-versions';
+import { useEffect, useState } from 'react';
+import { useLocation, useNavigate } from 'react-router';
 
 const SHLINK_TAGS_ENDPOINT = 'https://api.github.com/repos/shlinkio/shlink/tags';
 
@@ -15,14 +14,14 @@ const loadTags = async (): Promise<string[]> =>
     .then((tags: Tag[]) => tags.map(({ name }) => name));
 
 export const useRouter = () => {
-  const { push, query, pathname } = useNextRouter();
+  const { search, pathname } = useLocation();
+  const push = useNavigate();
   const navigate = async (url: string) => {
     const processedUrl = url.startsWith('/') ? url : `${pathname}${url}`;
-
-    return push(processedUrl, processedUrl, { shallow: true });
+    return push(processedUrl);
   };
 
-  return { navigate, query, pathname };
+  return { navigate, query: new URLSearchParams(search), pathname };
 };
 
 export const useShlinkTags = (): { tags: string[]; error: boolean } => {
@@ -38,14 +37,12 @@ export const useShlinkTags = (): { tags: string[]; error: boolean } => {
   return { tags, error };
 };
 
-export const useResolveVersion = (query: ParsedUrlQuery, tags: string[]): string | undefined => {
+export const useResolveVersion = (query: URLSearchParams, tags: string[]): string | undefined => {
   const [resolvedVersion, setResolvedVersion] = useState<string | undefined>();
 
   useEffect(() => {
-    const { version } = query;
-    const stringVersion = version as string | undefined;
-
-    setResolvedVersion(stringVersion ?? tags.find((tag) => !tag.includes('alpha') && !tag.includes('beta')));
+    const version = query.get('version');
+    setResolvedVersion(version ?? tags.find((tag) => !tag.includes('alpha') && !tag.includes('beta')));
   }, [query, tags]);
 
   return resolvedVersion;

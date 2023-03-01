@@ -1,5 +1,5 @@
-@import '~@asyncapi/react-component/styles/default.css';
-@import '~swagger-ui-react/swagger-ui.css';
+@import '@asyncapi/react-component/styles/default.css';
+@import 'swagger-ui-react/swagger-ui.css';
 
 body,
 html {

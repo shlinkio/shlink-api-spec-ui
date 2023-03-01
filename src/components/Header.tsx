@@ -1,14 +1,15 @@
-import React, { ChangeEvent, FunctionComponent, useEffect, useState } from 'react';
+import type { ChangeEvent, FunctionComponent } from 'react';
+import { useEffect, useState } from 'react';
 import Headroom from 'react-headroom';
 import { useResolveVersion, useRouter } from '../helpers';
-import ShlinkLogo from './ShlinkLogo';
+import { ShlinkLogo } from './ShlinkLogo';
 
 export interface HeaderProps {
   setTag: (newTag: string) => void;
   tags: string[];
 }
 
-const Header: FunctionComponent<HeaderProps> = ({ setTag, tags }) => {
+export const Header: FunctionComponent<HeaderProps> = ({ setTag, tags }) => {
   const { query } = useRouter();
   const [activeTag, setActiveTag] = useState('');
   const resolvedVersion = useResolveVersion(query, tags);
@@ -34,5 +35,3 @@ const Header: FunctionComponent<HeaderProps> = ({ setTag, tags }) => {
     </Headroom>
   );
 };
-
-export default Header;

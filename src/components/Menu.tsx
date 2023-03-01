@@ -1,22 +1,20 @@
-import React, { FunctionComponent } from 'react';
-import Link from 'next/link';
+import type { FunctionComponent } from 'react';
+import { Link } from 'react-router-dom';
 import { useRouter } from '../helpers';
 
-const Menu: FunctionComponent = () => {
+export const Menu: FunctionComponent = () => {
   const { pathname, query } = useRouter();
-  const { version } = query;
+  const version = query.get('version');
   const buildPath = (path: string): string => (version ? `${path}?version=${version}` : path);
 
   return (
     <div className="menu">
       <nav>
-        <Link href={buildPath('/')} className={pathname.includes('async-api') ? '' : 'active'}>REST API spec</Link>
-        <Link href={buildPath('/async-api')} className={pathname.includes('async-api') ? 'active' : ''}>
+        <Link to={buildPath('/')} className={pathname.includes('async-api') ? '' : 'active'}>REST API spec</Link>
+        <Link to={buildPath('/async-api')} className={pathname.includes('async-api') ? 'active' : ''}>
           Async API spec
         </Link>
       </nav>
     </div>
   );
 };
-
-export default Menu;
