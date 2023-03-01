@@ -1,5 +1,5 @@
-import { useEffect, useState } from 'react';
 import { compare } from 'compare-versions';
+import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router';
 
 const SHLINK_TAGS_ENDPOINT = 'https://api.github.com/repos/shlinkio/shlink/tags';

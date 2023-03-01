@@ -1,13 +1,13 @@
-import { FunctionComponent, PropsWithChildren } from 'react';
+import type { FunctionComponent, PropsWithChildren } from 'react';
 import { useRouter } from '../helpers';
-import Header from './Header';
-import Menu from './Menu';
+import { Header } from './Header';
+import { Menu } from './Menu';
 
 type LayoutProps = PropsWithChildren<{
   tags: string[];
 }>;
 
-const Layout: FunctionComponent<LayoutProps> = ({ children, tags }) => {
+export const Layout: FunctionComponent<LayoutProps> = ({ children, tags }) => {
   const { navigate } = useRouter();
   const navigateToTag = async (tag: string) => navigate(`?version=${tag}`);
 
@@ -19,5 +19,3 @@ const Layout: FunctionComponent<LayoutProps> = ({ children, tags }) => {
     </div>
   );
 };
-
-export default Layout;

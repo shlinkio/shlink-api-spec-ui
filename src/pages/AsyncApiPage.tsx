@@ -1,9 +1,9 @@
-import { FunctionComponent } from 'react';
 import { compare } from 'compare-versions';
+import type { FunctionComponent } from 'react';
+import { AsyncApiContainer } from '../components/AsyncApiContainer';
+import { Layout } from '../components/Layout';
+import { LoadingSpec } from '../components/LoadingSpec';
 import { useShlinkSpecUrl } from '../helpers';
-import LoadingSpec from '../components/LoadingSpec';
-import Layout from '../components/Layout';
-import AsyncApiContainer from '../components/AsyncApiContainer';
 
 const MIN_ASYNC_API_VERSION = '2.2.0';
 

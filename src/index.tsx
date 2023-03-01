@@ -1,8 +1,7 @@
-// @ts-expect-error - TODO
 import { createRoot } from 'react-dom/client';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { SwaggerPage } from './pages/SwaggerPage';
 import { AsyncApiPage } from './pages/AsyncApiPage';
+import { SwaggerPage } from './pages/SwaggerPage';
 import './assets/css/main.css';
 
 // eslint-disable-next-line @typescript-eslint/no-non-null-assertion
