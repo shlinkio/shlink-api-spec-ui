@@ -2,7 +2,6 @@
 /build
 node_modules
 docker-compose.override.yml
-/.next/
-/out/
+/build/
 npm-debug.log*
 home

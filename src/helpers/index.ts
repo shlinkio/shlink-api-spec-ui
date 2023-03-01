@@ -1,4 +1,3 @@
-import { ParsedUrlQuery, parse } from 'querystring';
 import { useEffect, useState } from 'react';
 import { compare } from 'compare-versions';
 import { useLocation, useNavigate } from 'react-router';
@@ -22,7 +21,7 @@ export const useRouter = () => {
     return push(processedUrl);
   };
 
-  return { navigate, query: parse(search), pathname };
+  return { navigate, query: new URLSearchParams(search), pathname };
 };
 
 export const useShlinkTags = (): { tags: string[]; error: boolean } => {
@@ -38,14 +37,12 @@ export const useShlinkTags = (): { tags: string[]; error: boolean } => {
   return { tags, error };
 };
 
-export const useResolveVersion = (query: ParsedUrlQuery, tags: string[]): string | undefined => {
+export const useResolveVersion = (query: URLSearchParams, tags: string[]): string | undefined => {
   const [resolvedVersion, setResolvedVersion] = useState<string | undefined>();
 
   useEffect(() => {
-    const { version } = query;
-    const stringVersion = version as string | undefined;
-
-    setResolvedVersion(stringVersion ?? tags.find((tag) => !tag.includes('alpha') && !tag.includes('beta')));
+    const version = query.get('version');
+    setResolvedVersion(version ?? tags.find((tag) => !tag.includes('alpha') && !tag.includes('beta')));
   }, [query, tags]);
 
   return resolvedVersion;

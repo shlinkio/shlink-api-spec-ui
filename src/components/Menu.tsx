@@ -4,7 +4,7 @@ import { useRouter } from '../helpers';
 
 const Menu: FunctionComponent = () => {
   const { pathname, query } = useRouter();
-  const { version } = query;
+  const version = query.get('version');
   const buildPath = (path: string): string => (version ? `${path}?version=${version}` : path);
 
   return (
