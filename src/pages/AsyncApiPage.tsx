@@ -12,14 +12,13 @@ export const AsyncApiPage: FC<{ tagsResult: LoadingTagsResult }> = ({ tagsResult
   const { url, versionToLoad } = useShlinkSpecUrl('async-api', tags);
   const versionIsTooSmall = versionToLoad && compare(versionToLoad, MIN_ASYNC_API_VERSION, '<');
 
-  return (
-    <>
-      {versionIsTooSmall && (
-        <div className="loading-spec">
-          <h2>Async API was introduced in Shlink v{MIN_ASYNC_API_VERSION}</h2>
-        </div>
-      )}
-      {!versionIsTooSmall && (!url ? <LoadingSpec withError={error} /> : <AsyncApiContainer url={url} />)}
-    </>
-  );
+  if (versionIsTooSmall) {
+    return (
+      <div className="loading-spec">
+        <h2>Async API was introduced in Shlink v{MIN_ASYNC_API_VERSION}</h2>
+      </div>
+    );
+  }
+
+  return !url ? <LoadingSpec withError={error} /> : <AsyncApiContainer url={url} />;
 };

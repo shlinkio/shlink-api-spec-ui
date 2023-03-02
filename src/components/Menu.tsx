@@ -1,8 +1,8 @@
-import type { FunctionComponent } from 'react';
+import type { FC } from 'react';
 import { Link } from 'react-router-dom';
 import { useRouter } from '../helpers';
 
-export const Menu: FunctionComponent = () => {
+export const Menu: FC = () => {
   const { pathname, query } = useRouter();
   const version = query.get('version');
   const buildPath = (path: string): string => (version ? `${path}?version=${version}` : path);

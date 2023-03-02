@@ -8,9 +8,5 @@ export const SwaggerPage: FC<{ tagsResult: LoadingTagsResult }> = ({ tagsResult 
   const { tags, error } = tagsResult;
   const { url } = useShlinkSpecUrl('swagger', tags);
 
-  return (
-    <>
-      {!url ? <LoadingSpec withError={error} /> : <SwaggerUI url={url} docExpansion="list" deepLinking />}
-    </>
-  );
+  return !url ? <LoadingSpec withError={error} /> : <SwaggerUI url={url} docExpansion="list" deepLinking />;
 };
