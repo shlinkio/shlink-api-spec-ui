@@ -1,5 +1,39 @@
-@import './components/Header.css';
-@import './components/Layout.css';
-@import './components/LoadingSpec.css';
-@import './components/Menu.css';
-@import './components/SwaggerContainer.css';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body,
+  html {
+    margin: 0;
+    font-family:
+      system-ui,
+      -apple-system,
+      'Segoe UI',
+      Roboto,
+      Helvetica,
+      Arial,
+      sans-serif,
+      'Apple Color Emoji',
+      'Segoe UI Emoji';
+  }
+}
+
+.swagger-ui .url {
+  word-wrap: break-word;
+}
+
+.swagger-ui .wrapper {
+  padding: 0 !important;
+}
+
+@layer components {
+  .menu-item {
+    font-family: sans-serif;
+    @apply text-shlink-color hover:text-shlink-color-dark py-1.5 px-2.5;
+  }
+
+  .menu-item.active {
+    @apply text-white bg-shlink-color rounded;
+  }
+}

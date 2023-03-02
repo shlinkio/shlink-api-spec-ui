@@ -72,7 +72,7 @@ export const useShlinkSpecUrl = (type: 'swagger' | 'async-api', tags: string[]):
 
   useEffect(() => {
     if (resolvedVersion) {
-      setVersionToLoad((resolvedVersion as string | undefined)?.substring(1));
+      setVersionToLoad(resolvedVersion.substring(1));
       setUrl(resolveSpecUrl(resolvedVersion, type));
     }
   }, [resolvedVersion]);

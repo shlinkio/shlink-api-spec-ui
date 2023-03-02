@@ -14,7 +14,7 @@ export const AsyncApiPage: FC<{ tagsResult: LoadingTagsResult }> = ({ tagsResult
 
   if (versionIsTooSmall) {
     return (
-      <div className="loading-spec">
+      <div className="mt-12 text-center">
         <h2>Async API was introduced in Shlink v{MIN_ASYNC_API_VERSION}</h2>
       </div>
     );

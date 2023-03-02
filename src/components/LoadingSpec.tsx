@@ -6,7 +6,7 @@ interface LoadingSpecProps {
 }
 
 export const LoadingSpec: FC<LoadingSpecProps> = ({ withError = false }) => (
-  <div className={classNames('loading-spec', { 'loading-spec__with-error': withError })}>
+  <div className={classNames('mt-12 text-center', { 'text-red-600': withError })}>
     <h2>{withError ? 'An error occurred. Try reloading the page.' : 'Loading Shlink\'s Open API spec...'}</h2>
   </div>
 );
