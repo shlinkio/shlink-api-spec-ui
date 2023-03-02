@@ -21,13 +21,14 @@ export const Header: FC<HeaderProps> = ({ setTag, tags }) => {
 
   return (
     <Headroom style={{ zIndex: 99 }}>
-      <header className="header swagger-ui">
-        <div className="wrapper">
-          <h2 className="header__title">
-            <ShlinkLogo className="header__title-logo" />{' '}
-            Shlink<span className="header__subtitle"> - <small>The URL shortener</small></span>
+      <header className="bg-shlink-color h-16 py-4">
+        <div className="container mx-auto px-5 flex">
+          <h2 className="text-white text-2xl font-bold flex-1">
+            <ShlinkLogo className="w-8 h-8 inline" />{' '}
+            Shlink<span className="hidden md:inline"> - <small>The URL shortener</small></span>
           </h2>
-          <select className="header__tags-list" value={activeTag} onChange={onTagChange}>
+          <select className="w-48 p-1 rounded drop-shadow-md border border-black" value={activeTag} onChange={onTagChange}>
+            {!tags.length && <option>Loading...</option>}
             {tags.map((tag: string) => <option key={tag} value={tag}>Shlink {tag}</option>)}
           </select>
         </div>
