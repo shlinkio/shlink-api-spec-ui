@@ -4,6 +4,24 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [Unreleased]
+### Added
+* *Nothing*
+
+### Changed
+* [#87](https://github.com/shlinkio/shlink-api-spec-ui/issues/87) Improve how tags are loaded.
+* [#91](https://github.com/shlinkio/shlink-api-spec-ui/issues/91) Migrate to tailwindcss.
+
+### Deprecated
+* *Nothing*
+
+### Removed
+* *Nothing*
+
+### Fixed
+* *Nothing*
+
+
 ## [2.0.0] - 2023-03-01
 ### Added
 * *Nothing*
