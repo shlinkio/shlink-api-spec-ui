@@ -1,4 +1,4 @@
-import type { ChangeEvent, FunctionComponent } from 'react';
+import type { ChangeEvent, FC } from 'react';
 import { useEffect, useState } from 'react';
 import Headroom from 'react-headroom';
 import { useResolveVersion, useRouter } from '../helpers';
@@ -9,7 +9,7 @@ export interface HeaderProps {
   tags: string[];
 }
 
-export const Header: FunctionComponent<HeaderProps> = ({ setTag, tags }) => {
+export const Header: FC<HeaderProps> = ({ setTag, tags }) => {
   const { query } = useRouter();
   const [activeTag, setActiveTag] = useState('');
   const resolvedVersion = useResolveVersion(query, tags);

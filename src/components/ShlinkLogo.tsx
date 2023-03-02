@@ -1,10 +1,10 @@
-import type { FunctionComponent } from 'react';
+import type { FC } from 'react';
 
 interface ShlinkLogoProps {
   className?: string;
 }
 
-export const ShlinkLogo: FunctionComponent<ShlinkLogoProps> = ({ className }) => (
+export const ShlinkLogo: FC<ShlinkLogoProps> = ({ className }) => (
   <svg
     width="512pt"
     height="512pt"
