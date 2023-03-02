@@ -24,7 +24,12 @@ export const useRouter = () => {
   return { navigate, query: new URLSearchParams(search), pathname };
 };
 
-export const useShlinkTags = (): { tags: string[]; error: boolean } => {
+export interface LoadingTagsResult {
+  tags: string[];
+  error: boolean;
+}
+
+export const useShlinkTags = (): LoadingTagsResult => {
   const [tags, setTags] = useState<string[]>([]);
   const [error, setError] = useState(false);
 
@@ -56,16 +61,13 @@ const resolveSpecUrl = (version: string, type: 'swagger' | 'async-api') => (type
   ? resolveSwaggerUrl(version)
   : `https://raw.githubusercontent.com/shlinkio/shlink/${version}/docs/async-api/async-api.json`);
 
-export const useShlinkSpecUrl = (type: 'swagger' | 'async-api'): {
+export const useShlinkSpecUrl = (type: 'swagger' | 'async-api', tags: string[]): {
   url: string | undefined;
   versionToLoad: string | undefined;
-  tags: string[];
-  tagsError: boolean;
 } => {
   const { query } = useRouter();
   const [url, setUrl] = useState<string | undefined>();
   const [versionToLoad, setVersionToLoad] = useState<string | undefined>();
-  const { tags, error } = useShlinkTags();
   const resolvedVersion = useResolveVersion(query, tags);
 
   useEffect(() => {
@@ -75,5 +77,5 @@ export const useShlinkSpecUrl = (type: 'swagger' | 'async-api'): {
     }
   }, [resolvedVersion]);
 
-  return { url, versionToLoad, tags, tagsError: error };
+  return { url, versionToLoad };
 };

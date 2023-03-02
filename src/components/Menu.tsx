@@ -10,8 +10,8 @@ export const Menu: FunctionComponent = () => {
   return (
     <div className="menu">
       <nav>
-        <Link to={buildPath('/')} className={pathname.includes('async-api') ? '' : 'active'}>REST API spec</Link>
-        <Link to={buildPath('/async-api')} className={pathname.includes('async-api') ? 'active' : ''}>
+        <Link to={buildPath('/')} className={pathname === '/' ? 'active' : ''}>REST API spec</Link>
+        <Link to={buildPath('/async-api')} className={pathname === '/async-api' ? 'active' : ''}>
           Async API spec
         </Link>
       </nav>
