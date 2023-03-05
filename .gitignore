@@ -5,3 +5,4 @@ docker-compose.override.yml
 /build/
 npm-debug.log*
 home
+tsconfig.tsbuildinfo

@@ -13,7 +13,7 @@
     "lint": "eslint --ext .js,.ts,.tsx src",
     "lint:fix": "npm run lint -- --fix",
     "start": "vite serve --host=0.0.0.0",
-    "build": "tsc --noEmit && vite build"
+    "build": "tsc && vite build"
   },
   "dependencies": {
     "@asyncapi/react-component": "^1.0.0-next.47",

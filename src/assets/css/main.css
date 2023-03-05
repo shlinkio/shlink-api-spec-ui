@@ -22,11 +22,11 @@
 @layer components {
   .menu-item {
     font-family: sans-serif;
-    @apply text-shlink-color hover:text-shlink-color-dark py-1.5 px-2.5;
+    @apply text-shlink-brand hover:text-shlink-brand-dark py-1.5 px-2.5;
   }
 
   .menu-item.active {
-    @apply text-white bg-shlink-color rounded;
+    @apply text-white bg-shlink-brand rounded;
   }
 }
 
