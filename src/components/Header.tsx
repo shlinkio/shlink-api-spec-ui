@@ -21,7 +21,7 @@ export const Header: FC<HeaderProps> = ({ setTag, tags }) => {
 
   return (
     <Headroom style={{ zIndex: 99 }}>
-      <header className="bg-shlink-color h-16 py-4">
+      <header className="bg-shlink-brand h-16 py-4">
         <div className="container mx-auto px-5 flex">
           <h2 className="text-white text-2xl font-bold flex-1">
             <ShlinkLogo className="w-8 h-8 inline" />{' '}

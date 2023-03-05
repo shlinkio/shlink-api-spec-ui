@@ -6,8 +6,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'shlink-color': '#4696e5',
-        'shlink-color-dark': '#1f69c0'
+        'shlink-brand': {
+          'DEFAULT': '#4696e5',
+          'dark': '#1f69c0'
+        },
       }
     },
     screens: {

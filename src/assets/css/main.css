@@ -19,6 +19,18 @@
   }
 }
 
+@layer components {
+  .menu-item {
+    font-family: sans-serif;
+    @apply text-shlink-brand hover:text-shlink-brand-dark py-1.5 px-2.5;
+  }
+
+  .menu-item.active {
+    @apply text-white bg-shlink-brand rounded;
+  }
+}
+
+/* Overwrite swagger styles */
 .swagger-ui .url {
   word-wrap: break-word;
 }
@@ -27,13 +39,26 @@
   padding: 0 !important;
 }
 
-@layer components {
-  .menu-item {
-    font-family: sans-serif;
-    @apply text-shlink-color hover:text-shlink-color-dark py-1.5 px-2.5;
+.swagger-ui .scheme-container {
+  box-shadow: none;
+  padding: 0;
+}
+
+.swagger-ui .auth-wrapper .authorize {
+  margin-right: 0;
+}
+
+/* Overwrite API spec styles */
+.aui-root {
+  @apply -ml-6;
+}
+
+@media (max-width: 1535px) {
+  .aui-root {
+    @apply -mr-6;
   }
 
-  .menu-item.active {
-    @apply text-white bg-shlink-color rounded;
+  .aui-root .panel-item--right {
+    @apply mx-8;
   }
 }
