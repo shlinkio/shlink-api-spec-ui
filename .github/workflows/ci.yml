@@ -10,6 +10,5 @@ jobs:
   ci:
     uses: shlinkio/github-actions/.github/workflows/web-app-ci.yml@main
     with:
-      node-version: 20.2
+      node-version: 20.5
       with-unit-tests: false
-      force-install: true

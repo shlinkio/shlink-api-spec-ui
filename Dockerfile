@@ -1,7 +1,7 @@
 FROM node:20.5-alpine as node
 COPY . /shlink-api-spec
 RUN cd /shlink-api-spec && \
-    npm ci --force && \
+    npm ci && \
     npm run build
 
 FROM nginx:1.25-alpine
