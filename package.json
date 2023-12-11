@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@asyncapi/react-component": "1.2.6",
-    "@vitejs/plugin-react": "^4.2.0",
+    "@vitejs/plugin-react": "^4.2.1",
     "classnames": "^2.3.2",
     "compare-versions": "^6.1.0",
     "react": "^18.2.0",
@@ -27,7 +27,7 @@
     "react-router-dom": "^6.20.1",
     "swagger-ui": "^5.10.3",
     "swagger-ui-react": "^5.10.3",
-    "vite": "^5.0.5"
+    "vite": "^5.0.7"
   },
   "devDependencies": {
     "@shlinkio/eslint-config-js-coding-standard": "~2.3.0",
