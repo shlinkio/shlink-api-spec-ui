@@ -25,8 +25,8 @@
     "react-dom": "^18.2.0",
     "react-headroom": "^3.2.1",
     "react-router-dom": "^6.21.3",
-    "swagger-ui": "^5.11.0",
-    "swagger-ui-react": "^5.11.0",
+    "swagger-ui": "^5.11.1",
+    "swagger-ui-react": "^5.11.1",
     "vite": "^5.0.12"
   },
   "devDependencies": {
