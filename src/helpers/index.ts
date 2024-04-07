@@ -75,7 +75,7 @@ export const useShlinkSpecUrl = (type: 'swagger' | 'async-api', tags: string[]):
       setVersionToLoad(resolvedVersion.substring(1));
       setUrl(resolveSpecUrl(resolvedVersion, type));
     }
-  }, [resolvedVersion]);
+  }, [resolvedVersion, type]);
 
   return { url, versionToLoad };
 };
