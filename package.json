@@ -27,7 +27,7 @@
     "react-router-dom": "^6.23.1",
     "swagger-ui": "^5.17.12",
     "swagger-ui-react": "^5.17.12",
-    "vite": "^5.2.11"
+    "vite": "^5.2.12"
   },
   "devDependencies": {
     "@shlinkio/eslint-config-js-coding-standard": "~2.4.1",
