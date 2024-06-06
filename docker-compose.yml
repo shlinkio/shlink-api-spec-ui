@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   shlink_api_spec_ui:
     container_name: shlink_api_spec_ui
