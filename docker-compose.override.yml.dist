@@ -1,5 +1,3 @@
-version: '3'
-
 services:
   shlink_api_spec_ui:
     user: 1000:1000
