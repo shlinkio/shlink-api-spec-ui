@@ -1,7 +1,7 @@
 services:
   shlink_api_spec_ui:
     container_name: shlink_api_spec_ui
-    image: node:20.2-alpine
+    image: node:22.3-alpine
     command: /bin/sh -c "cd /shlink-api-spec && npm install && npm run start"
     volumes:
       - ./:/shlink-api-spec
