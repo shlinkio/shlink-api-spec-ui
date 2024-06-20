@@ -4,13 +4,14 @@
   "author": "Alejandro Celaya Alastrué",
   "readmeFilename": "README.md",
   "private": false,
+  "type": "module",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/shlinkio/shlink.io"
   },
   "scripts": {
-    "lint": "eslint --ext .js,.ts,.tsx src",
+    "lint": "eslint src",
     "lint:fix": "npm run lint -- --fix",
     "start": "vite serve --host=0.0.0.0",
     "types": "tsc",
@@ -30,14 +31,13 @@
     "vite": "^5.3.1"
   },
   "devDependencies": {
-    "@shlinkio/eslint-config-js-coding-standard": "~2.5.1",
+    "@shlinkio/eslint-config-js-coding-standard": "~3.0.0",
+    "@stylistic/eslint-plugin": "^2.2.2",
     "@types/node": "^20.14.2",
     "@types/react": "^18.3.3",
     "@types/react-dom": "^18.3.0",
     "@types/react-headroom": "^3.2.3",
     "@types/swagger-ui-react": "^4.18.3",
-    "@typescript-eslint/eslint-plugin": "^7.13.0",
-    "@typescript-eslint/parser": "^7.13.0",
     "autoprefixer": "^10.4.19",
     "eslint": "^8.57.0",
     "eslint-plugin-jsx-a11y": "^6.8.0",
@@ -45,6 +45,7 @@
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-simple-import-sort": "^12.1.0",
     "tailwindcss": "^3.4.4",
-    "typescript": "^5.4.5"
+    "typescript": "^5.4.5",
+    "typescript-eslint": "^7.13.1"
   }
 }
