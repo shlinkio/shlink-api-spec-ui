@@ -16,7 +16,9 @@ export const Header: FC<HeaderProps> = ({ setTag, tags }) => {
   const onTagChange = ({ target }: ChangeEvent<HTMLSelectElement>) => setTag(target.value);
 
   useEffect(() => {
-    resolvedVersion && setActiveTag(resolvedVersion);
+    if (resolvedVersion) {
+      setActiveTag(resolvedVersion);
+    }
   }, [resolvedVersion]);
 
   return (
