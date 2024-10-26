@@ -10,5 +10,5 @@ jobs:
   ci:
     uses: shlinkio/github-actions/.github/workflows/web-app-ci.yml@main
     with:
-      node-version: 22.4
+      node-version: 22.x
       with-unit-tests: false
