@@ -1,4 +1,4 @@
-FROM node:23.4-alpine as node
+FROM node:23.5-alpine as node
 COPY . /shlink-api-spec
 RUN cd /shlink-api-spec && \
     npm ci && \
