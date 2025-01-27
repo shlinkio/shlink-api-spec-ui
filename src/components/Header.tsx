@@ -29,7 +29,11 @@ export const Header: FC<HeaderProps> = ({ setTag, tags }) => {
             <ShlinkLogo className="w-8 h-8 inline" />{' '}
             Shlink<span className="hidden md:inline"> - <small>The URL shortener</small></span>
           </h2>
-          <select className="w-48 p-1 rounded drop-shadow-md border border-black" value={activeTag} onChange={onTagChange}>
+          <select
+            className="w-48 p-1 rounded-sm drop-shadow-md border border-black bg-gray-100"
+            value={activeTag}
+            onChange={onTagChange}
+          >
             {!tags.length && <option>Loading...</option>}
             {tags.map((tag: string) => <option key={tag} value={tag}>Shlink {tag}</option>)}
           </select>
