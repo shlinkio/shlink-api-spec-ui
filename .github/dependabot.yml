@@ -26,6 +26,10 @@ updates:
           - 'typescript-eslint'
           - '*eslint-plugin*'
           - eslint
+      tailwindcss:
+        patterns:
+          - 'tailwindcss'
+          - '@tailwindcss/*'
   - package-ecosystem: docker
     directory: '/'
     schedule:
