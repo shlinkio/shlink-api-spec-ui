@@ -26,8 +26,8 @@
     "react-dom": "^18.3.1",
     "react-headroom": "^3.2.1",
     "react-router-dom": "^7.1.4",
-    "swagger-ui": "^5.18.2",
-    "swagger-ui-react": "^5.18.2",
+    "swagger-ui": "^5.18.3",
+    "swagger-ui-react": "^5.18.3",
     "vite": "^6.0.11"
   },
   "devDependencies": {
@@ -38,7 +38,7 @@
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
     "@types/react-headroom": "^3.2.3",
-    "@types/swagger-ui-react": "^4.18.3",
+    "@types/swagger-ui-react": "^5.18.0",
     "eslint": "^9.19.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
     "eslint-plugin-react": "^7.37.4",
