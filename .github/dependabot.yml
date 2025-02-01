@@ -9,6 +9,12 @@ updates:
       timezone: 'Europe/Madrid'
     open-pull-requests-limit: 10
     groups:
+      react:
+        patterns:
+          - 'react'
+          - 'react-dom'
+          - '@types/react'
+          - '@types/react-dom'
       types:
         patterns:
           - '@types/*'
