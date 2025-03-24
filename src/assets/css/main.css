@@ -8,8 +8,8 @@
   --breakpoint-xl: 1280px;
   --breakpoint-2xl: 1460px;
 
-  --color-shlink-brand: #4696e5;
-  --color-shlink-brand-dark: #1f69c0;
+  --color-shlink-brand: #2978cf;
+  --color-shlink-brand-dark: #1d5087;
 }
 
 /*
@@ -27,6 +27,14 @@
   ::backdrop,
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
+  }
+
+  .swagger-ui .link {
+    @apply text-shlink-brand!;
+  }
+
+  .swagger-ui .link:hover {
+    @apply text-shlink-brand-dark!;
   }
 }
 
