@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Route, Routes } from 'react-router';
 import { useShlinkTags } from '../helpers';
 import { AsyncApiPage } from '../pages/AsyncApiPage';
 import { SwaggerPage } from '../pages/SwaggerPage';
