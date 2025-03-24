@@ -12,6 +12,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 * Migrate from postcss to the official tailwind vite plugin
 * Use new Shlink brand color
 * Update dependencies
+* Add `eslint-plugin-react-compiler`.
 
 ### Deprecated
 * *Nothing*
