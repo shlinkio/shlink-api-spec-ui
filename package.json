@@ -33,7 +33,7 @@
   "devDependencies": {
     "@shlinkio/eslint-config-js-coding-standard": "~3.4.0",
     "@stylistic/eslint-plugin": "^4.2.0",
-    "@tailwindcss/vite": "^4.0.15",
+    "@tailwindcss/vite": "^4.0.17",
     "@types/node": "^22.13.11",
     "@types/react": "^18.3.12",
     "@types/react-dom": "^18.3.1",
