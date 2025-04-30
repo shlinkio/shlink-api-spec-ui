@@ -1,12 +1,22 @@
 import type { FC } from 'react';
-import SwaggerUI from 'swagger-ui-react';
+import { useEffect, useRef } from 'react';
+import { SwaggerUIBundle } from 'swagger-ui-dist';
 import { LoadingSpec } from '../components/LoadingSpec';
 import type { LoadingTagsResult } from '../helpers';
-import { useShlinkSpecUrl } from '../helpers';
+import { useShlinkSpec } from '../helpers';
 
 export const SwaggerPage: FC<{ tagsResult: LoadingTagsResult }> = ({ tagsResult }) => {
   const { tags, error } = tagsResult;
-  const { url } = useShlinkSpecUrl('swagger', tags);
+  const swaggerRef = useRef<HTMLDivElement>(null);
+  const spec = useShlinkSpec('swagger', tags);
 
-  return !url ? <LoadingSpec withError={error} /> : <SwaggerUI url={url} docExpansion="list" deepLinking />;
+  useEffect(() => {
+    SwaggerUIBundle({
+      domNode: swaggerRef.current,
+      spec,
+      deepLinking: true,
+    });
+  }, [spec]);
+
+  return !spec ? <LoadingSpec withError={error} /> : <div className="swagger-ui-wrapper" ref={swaggerRef} />;
 };

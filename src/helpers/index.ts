@@ -1,6 +1,7 @@
 import { compare } from 'compare-versions';
 import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router';
+import type { Spec } from 'swagger-ui-dist';
 
 const SHLINK_TAGS_ENDPOINT = 'https://api.github.com/repos/shlinkio/shlink/tags';
 
@@ -78,4 +79,17 @@ export const useShlinkSpecUrl = (type: 'swagger' | 'async-api', tags: string[]):
   }, [resolvedVersion, type]);
 
   return { url, versionToLoad };
+};
+
+export const useShlinkSpec = (type: 'swagger' | 'async-api', tags: string[]): Spec | undefined => {
+  const { url } = useShlinkSpecUrl(type, tags);
+  const [spec, setSpec] = useState<Spec>();
+
+  useEffect(() => {
+    if (url) {
+      fetch(url).then((resp) => resp.json()).then(setSpec);
+    }
+  }, [url]);
+
+  return spec;
 };

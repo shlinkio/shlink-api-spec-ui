@@ -20,8 +20,8 @@ updates:
           - '@types/*'
       swagger:
         patterns:
-          - 'swagger-ui'
-          - 'swagger-ui-react'
+          - 'swagger-ui-dist'
+          - '@types/swagger-ui-dist'
       vite:
         patterns:
           - 'vite'
