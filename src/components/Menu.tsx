@@ -10,7 +10,7 @@ export const Menu: FC = () => {
   const buildClasses = (active: boolean) => classNames('menu-item', { active });
 
   return (
-    <div className="mt-6 mb-2.5">
+    <div className="mb-2.5">
       <nav>
         <Link to={buildPath('/')} className={buildClasses(pathname === '/')}>REST API spec</Link>
         <Link to={buildPath('/async-api')} className={buildClasses(pathname === '/async-api')}>Async API spec</Link>

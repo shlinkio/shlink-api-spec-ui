@@ -14,7 +14,7 @@ export const Layout: FC<LayoutProps> = ({ children, tags }) => {
   return (
     <div>
       <Header setTag={navigateToTag} tags={tags} />
-      <div className="container mx-auto px-5">
+      <div className="container mx-auto px-5 pt-22">
         <Menu />
         {children}
       </div>

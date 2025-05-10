@@ -15,9 +15,6 @@ updates:
           - 'react-dom'
           - '@types/react'
           - '@types/react-dom'
-      types:
-        patterns:
-          - '@types/*'
       swagger:
         patterns:
           - 'swagger-ui-dist'

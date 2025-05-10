@@ -4,6 +4,23 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/), and this project adheres to [Semantic Versioning](https://semver.org).
 
+## [2.11.0] - 2025-05-10
+### Added
+* *Nothing*
+
+### Changed
+* Update to React 19
+
+### Deprecated
+* *Nothing*
+
+### Removed
+* [#607](https://github.com/shlinkio/shlink-api-spec-ui/issues/607) Remove react-headroom and make header fully fixed.
+
+### Fixed
+* *Nothing*
+
+
 ## [2.10.0] - 2025-04-30
 ### Added
 * *Nothing*
