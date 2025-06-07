@@ -31,7 +31,7 @@
     "@stylistic/eslint-plugin": "^4.4.1",
     "@tailwindcss/vite": "^4.1.8",
     "@types/react": "^19.1.6",
-    "@types/react-dom": "^19.1.5",
+    "@types/react-dom": "^19.1.6",
     "@types/swagger-ui-dist": "^3.30.5",
     "@vitejs/plugin-react": "^4.5.1",
     "eslint": "^9.28.0",
