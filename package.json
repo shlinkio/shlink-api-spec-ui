@@ -27,7 +27,7 @@
     "swagger-ui-dist": "^5.29.4"
   },
   "devDependencies": {
-    "@shlinkio/eslint-config-js-coding-standard": "~3.6.1",
+    "@shlinkio/eslint-config-js-coding-standard": "~3.7.0",
     "@stylistic/eslint-plugin": "^5.4.0",
     "@tailwindcss/vite": "^4.1.14",
     "@types/react": "^19.2.2",
