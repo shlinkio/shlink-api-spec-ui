@@ -23,7 +23,7 @@
     "compare-versions": "^6.1.1",
     "react": "^19.2.3",
     "react-dom": "^19.2.3",
-    "react-router": "^7.10.1",
+    "react-router": "^7.11.0",
     "swagger-ui-dist": "^5.31.0"
   },
   "devDependencies": {
