@@ -28,7 +28,7 @@
   },
   "devDependencies": {
     "@shlinkio/eslint-config-js-coding-standard": "~3.7.0",
-    "@stylistic/eslint-plugin": "^5.7.0",
+    "@stylistic/eslint-plugin": "^5.7.1",
     "@tailwindcss/vite": "^4.1.18",
     "@types/react": "^19.2.8",
     "@types/react-dom": "^19.2.3",
@@ -43,7 +43,7 @@
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "tailwindcss": "^4.0.1",
     "typescript": "^5.9.3",
-    "typescript-eslint": "^8.53.0",
+    "typescript-eslint": "^8.53.1",
     "vite": "^7.3.1"
   }
 }
