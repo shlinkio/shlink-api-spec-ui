@@ -18,7 +18,7 @@
     "build": "npm run types && vite build"
   },
   "dependencies": {
-    "@asyncapi/react-component": "3.0.0",
+    "@asyncapi/react-component": "3.0.1",
     "classnames": "^2.5.1",
     "compare-versions": "^6.1.1",
     "react": "^19.2.4",
