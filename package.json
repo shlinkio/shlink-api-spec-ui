@@ -21,8 +21,8 @@
     "@asyncapi/react-component": "3.1.0",
     "classnames": "^2.5.1",
     "compare-versions": "^6.1.1",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
+    "react": "^19.2.5",
+    "react-dom": "^19.2.5",
     "react-router": "^7.14.0",
     "swagger-ui-dist": "^5.32.1"
   },
