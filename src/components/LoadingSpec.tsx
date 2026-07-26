@@ -1,4 +1,4 @@
-import classNames from 'classnames';
+import classNames from 'clsx';
 import type { FC } from 'react';
 
 interface LoadingSpecProps {
@@ -7,6 +7,6 @@ interface LoadingSpecProps {
 
 export const LoadingSpec: FC<LoadingSpecProps> = ({ withError = false }) => (
   <div className={classNames('mt-12 text-center', { 'text-red-600': withError })}>
-    <h2>{withError ? 'An error occurred. Try reloading the page.' : 'Loading Shlink\'s Open API spec...'}</h2>
+    <h2>{withError ? 'An error occurred. Try reloading the page.' : "Loading Shlink's Open API spec..."}</h2>
   </div>
 );

@@ -54,15 +54,20 @@ export const useResolveVersion = (query: URLSearchParams, tags: string[]): strin
   return resolvedVersion;
 };
 
-const resolveSwaggerUrl = (version: string) => (compare('v2.2.0', version, '>')
-  ? `https://raw.githubusercontent.com/shlinkio/shlink/${version}/docs/swagger/swagger.json`
-  : `https://raw.githubusercontent.com/shlinkio/shlink-open-api-specs/main/specs/${version}/open-api-spec.json`);
+const resolveSwaggerUrl = (version: string) =>
+  compare('v2.2.0', version, '>')
+    ? `https://raw.githubusercontent.com/shlinkio/shlink/${version}/docs/swagger/swagger.json`
+    : `https://raw.githubusercontent.com/shlinkio/shlink-open-api-specs/main/specs/${version}/open-api-spec.json`;
 
-const resolveSpecUrl = (version: string, type: 'swagger' | 'async-api') => (type === 'swagger'
-  ? resolveSwaggerUrl(version)
-  : `https://raw.githubusercontent.com/shlinkio/shlink/${version}/docs/async-api/async-api.json`);
+const resolveSpecUrl = (version: string, type: 'swagger' | 'async-api') =>
+  type === 'swagger'
+    ? resolveSwaggerUrl(version)
+    : `https://raw.githubusercontent.com/shlinkio/shlink/${version}/docs/async-api/async-api.json`;
 
-export const useShlinkSpecUrl = (type: 'swagger' | 'async-api', tags: string[]): {
+export const useShlinkSpecUrl = (
+  type: 'swagger' | 'async-api',
+  tags: string[],
+): {
   url: string | undefined;
   versionToLoad: string | undefined;
 } => {
@@ -87,7 +92,10 @@ export const useShlinkSpec = (type: 'swagger' | 'async-api', tags: string[]): Sp
 
   useEffect(() => {
     if (url) {
-      fetch(url).then((resp) => resp.json()).then(setSpec);
+      fetch(url)
+        .then((resp) => resp.json())
+        .then(setSpec)
+        .catch(() => {});
     }
   }, [url]);
 
