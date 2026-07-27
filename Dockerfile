@@ -2,7 +2,7 @@ FROM node:26.5-alpine AS node
 COPY . /shlink-api-spec
 RUN cd /shlink-api-spec && \
     npm ci && \
-    npm run build
+    node --run build
 
 FROM nginx:1.31.3-alpine
 LABEL maintainer="Alejandro Celaya <alejandro@alejandrocelaya.com>"
