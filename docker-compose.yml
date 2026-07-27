@@ -2,9 +2,9 @@ services:
   shlink_api_spec_ui:
     container_name: shlink_api_spec_ui
     user: 1000:1000
-    image: node:26.1-alpine
+    image: node:26.5-alpine
     working_dir: '/shlink-api-spec'
-    command: /bin/sh -c "npm install && npm run start"
+    command: /bin/sh -c "npm install && node --run start"
     volumes:
       - ./:/shlink-api-spec
     ports:
