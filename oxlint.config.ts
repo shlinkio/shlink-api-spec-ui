@@ -4,8 +4,8 @@ import { defineConfig } from 'oxlint';
 
 export default defineConfig({
   extends: [shlink],
-  rules: {
-    'react/react-compiler': 'off',
+  categories: {
+    correctness: 'off',
   },
   overrides: [
     {
