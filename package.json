@@ -22,7 +22,7 @@
     "build": "node --run types && vite build"
   },
   "dependencies": {
-    "@asyncapi/react-component": "3.1.8",
+    "@asyncapi/react-component": "3.2.1",
     "clsx": "^2.1.1",
     "compare-versions": "^6.1.1",
     "react": "^19.3.0",
