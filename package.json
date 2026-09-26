@@ -28,7 +28,7 @@
     "react": "^19.3.0",
     "react-dom": "^19.3.0",
     "react-router": "^8.4.0",
-    "swagger-ui-dist": "^5.32.15"
+    "swagger-ui-dist": "^5.33.0"
   },
   "devDependencies": {
     "@shlinkio/eslint-config-js-coding-standard": "~4.2.0",
